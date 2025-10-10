@@ -1,0 +1,385 @@
+2025-09-24 12:06:28,463 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:06:28,464 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:06:28,465 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:06:28,465 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:06:56,975 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:06:58,962 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-09-24 12:06:58,970 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-24 12:06:58,978 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:06:59,005 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:07:22,120 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:07:22,122 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:07:22,123 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:07:22,124 - src.excel_processor - INFO - 待发送邮箱数量: 3
+2025-09-24 12:07:22,148 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:07:22,149 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:07:22,150 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:07:22,156 - src.excel_processor - INFO - 统计信息: {'总邮箱数': 3, '符合条件邮箱数': 3, '发送成功数': 0, '发送失败数': 0, '待发送数': 3}
+2025-09-24 12:08:59,329 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:08:59,333 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:08:59,336 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:09:01,523 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2025-09-24 12:09:01,524 - src.gmail_auth - ERROR - 认证验证失败: <HttpError 403 when requesting https://gmail.googleapis.com/gmail/v1/users/me/profile?alt=json returned "Request had insufficient authentication scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]">
+2025-09-24 12:09:01,524 - src.email_assistant - WARNING - 现有认证无效，需要重新认证: junoliii98@gmail.com
+2025-09-24 12:09:01,525 - src.gmail_auth - INFO - 认证文件已删除: token_junoliii98_gmail_com.json
+2025-09-24 12:09:11,992 - google_auth_oauthlib.flow - INFO - "GET /?state=szVFu4eFJ6iAVE2D9WiOA283sXs3Tj&code=4/0AVGzR1CN33VlglRPLAj5reJ__ewRCxp_f2rtEnGdvv1uM9JG5JDyW_rrV--3vMHgsXd5EA&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2025-09-24 12:09:14,040 - src.gmail_auth - INFO - OAuth认证成功: junoliii98@gmail.com
+2025-09-24 12:09:14,044 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-24 12:09:14,047 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:09:14,628 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:09:14,678 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:09:14,711 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:09:14,719 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:09:14,726 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:09:14,765 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:09:14,767 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:09:14,767 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:09:14,769 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:09:14,769 - src.email_scheduler - ERROR - 模板邮件发送过程中出现错误: 'EmailScheduler' object has no attribute '_reset_status'
+2025-09-24 12:09:32,011 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:09:32,015 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:09:32,018 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:09:34,243 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2025-09-24 12:09:34,243 - src.gmail_auth - ERROR - 认证验证失败: <HttpError 403 when requesting https://gmail.googleapis.com/gmail/v1/users/me/profile?alt=json returned "Request had insufficient authentication scopes.". Details: "[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]">
+2025-09-24 12:09:34,244 - src.email_assistant - WARNING - 现有认证无效，需要重新认证: junoliii98@gmail.com
+2025-09-24 12:09:34,245 - src.gmail_auth - INFO - 认证文件已删除: token_junoliii98_gmail_com.json
+2025-09-24 12:09:42,225 - google_auth_oauthlib.flow - INFO - "GET /?state=hrL5SDjcWp04H4ffdMDCsJYNcyopg1&code=4/0AVGzR1Bak2le5IcAoWuo5xlXARKNoWqVbNoe6t9d3sz7sxZ3_nXdzXv7fi33bqD5j-5qJw&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2025-09-24 12:09:44,229 - src.gmail_auth - INFO - OAuth认证成功: junoliii98@gmail.com
+2025-09-24 12:09:44,232 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-24 12:09:44,236 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:09:44,897 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:09:44,933 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:09:44,966 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:09:44,970 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:09:44,973 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:09:45,004 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:09:45,008 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:09:45,008 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:09:45,010 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:09:45,011 - src.email_scheduler - ERROR - 模板邮件发送过程中出现错误: 'EmailScheduler' object has no attribute '_reset_status'
+2025-09-24 12:14:37,496 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:14:37,496 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:14:37,721 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:14:37,735 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:14:37,737 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:14:37,740 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:14:37,742 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:14:37,762 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:14:37,763 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:14:37,763 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:14:37,764 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:14:37,764 - src.email_scheduler - INFO - 等待开始时间: 2025-09-24 15:00:00
+2025-09-24 12:15:01,042 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:15:01,043 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:15:01,043 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:15:01,044 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:15:12,810 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:15:12,813 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:15:12,813 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:15:12,813 - src.excel_processor - INFO - 待发送邮箱数量: 3
+2025-09-24 12:15:12,833 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:15:12,834 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:15:12,834 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:15:12,836 - src.excel_processor - INFO - 统计信息: {'总邮箱数': 3, '符合条件邮箱数': 3, '发送成功数': 0, '发送失败数': 0, '待发送数': 3}
+2025-09-24 12:16:16,086 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:16:16,087 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:16:16,362 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:16:16,381 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:16:16,384 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:16:16,392 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:16:16,394 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:16:16,412 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:16:16,415 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:16:16,416 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:16:16,417 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:16:16,417 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 12:16:16,418 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 12:16:20,009 - src.email_sender - INFO - 邮件发送成功: johnloneyy@gmail.com, Message ID: 19979efc3b4c779c
+2025-09-24 12:16:20,075 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 12:16:20,076 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 12:16:20,076 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 12:16:51,139 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 12:16:51,790 - src.email_sender - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 19979f03e0783e3e
+2025-09-24 12:16:51,870 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 12:16:51,870 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 12:16:51,870 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 12:17:22,925 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 12:17:23,444 - src.email_sender - INFO - 邮件发送成功: swipeupus.official@gmail.com, Message ID: 19979f0ba43c6f84
+2025-09-24 12:17:23,495 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 12:17:23,496 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 12:17:23,496 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:07.078516
+2025-09-24 12:24:32,768 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:24:32,769 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:24:33,056 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:24:33,062 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:24:33,064 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:24:33,067 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:24:33,069 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:24:33,075 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:24:33,077 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:24:33,077 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:24:33,078 - src.excel_processor - INFO - 获取到 0 条待处理的数据记录
+2025-09-24 12:25:36,677 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:25:36,678 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:25:36,987 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test_fresh_data.xlsx
+2025-09-24 12:25:36,993 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:25:36,995 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:25:36,999 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:25:37,001 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:25:37,007 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:25:37,009 - src.excel_processor - INFO - 过滤后的邮箱数量: 2
+2025-09-24 12:25:37,009 - src.excel_processor - INFO - 待发送邮箱列表: ['test1_new@example.com', 'test2_new@example.com']
+2025-09-24 12:25:37,010 - src.excel_processor - INFO - 获取到 2 条待处理的数据记录
+2025-09-24 12:25:37,010 - src.email_scheduler - INFO - 等待开始时间: 2025-09-24 12:26:00
+2025-09-24 12:27:18,159 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:27:18,159 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:27:18,372 - src.excel_processor - INFO - Excel文件验证成功: test_fresh_data.xlsx
+2025-09-24 12:27:18,379 - src.excel_processor - INFO - 成功读取Excel文件: test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:27:18,382 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:27:18,387 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:27:18,390 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:27:18,401 - src.excel_processor - INFO - 成功读取Excel文件: test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:27:18,403 - src.excel_processor - INFO - 过滤后的邮箱数量: 2
+2025-09-24 12:27:18,403 - src.excel_processor - INFO - 待发送邮箱列表: ['test1_new@example.com', 'test2_new@example.com']
+2025-09-24 12:27:18,405 - src.excel_processor - INFO - 获取到 2 条待处理的数据记录
+2025-09-24 12:27:18,405 - src.email_scheduler - INFO - 等待开始时间: 2025-09-24 15:00:00
+2025-09-24 12:29:29,645 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:29:29,645 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:29:29,856 - src.excel_processor - INFO - Excel文件验证成功: test_fresh_data.xlsx
+2025-09-24 12:29:29,861 - src.excel_processor - INFO - 成功读取Excel文件: test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:29:29,863 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:29:29,866 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:29:29,868 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:29:29,873 - src.excel_processor - INFO - 成功读取Excel文件: test_fresh_data.xlsx, 共 2 行数据
+2025-09-24 12:29:29,874 - src.excel_processor - INFO - 过滤后的邮箱数量: 2
+2025-09-24 12:29:29,874 - src.excel_processor - INFO - 待发送邮箱列表: ['test1_new@example.com', 'test2_new@example.com']
+2025-09-24 12:29:29,875 - src.excel_processor - INFO - 获取到 2 条待处理的数据记录
+2025-09-24 12:29:29,875 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 2
+2025-09-24 12:29:29,875 - src.email_scheduler - INFO - 发送邮件 (1/2): test1_new@example.com [English]
+2025-09-24 12:29:33,909 - src.email_sender - INFO - 邮件发送成功: test1_new@example.com, Message ID: 19979fbdf307181d
+2025-09-24 12:29:33,976 - src.excel_processor - INFO - 邮箱状态更新成功: test1_new@example.com
+2025-09-24 12:29:33,977 - src.email_scheduler - INFO - 邮件发送成功: test1_new@example.com
+2025-09-24 12:29:33,977 - src.email_scheduler - INFO - 等待 10 秒...
+2025-09-24 12:30:05,872 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:30:05,873 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:30:06,124 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:30:06,131 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:30:06,134 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:30:06,137 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:30:06,138 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:30:06,149 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:30:06,151 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:30:06,152 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:30:06,153 - src.excel_processor - INFO - 获取到 0 条待处理的数据记录
+2025-09-24 12:30:23,509 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:30:23,510 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 12:30:23,725 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 12:30:23,744 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:30:23,747 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 12:30:23,755 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 12:30:23,768 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 12:30:23,802 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 12:30:23,804 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 12:30:23,804 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 12:30:23,806 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 12:30:23,806 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 12:30:23,807 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 12:30:26,649 - src.email_sender - INFO - 邮件发送成功: johnloneyy@gmail.com, Message ID: 19979fcac97eaf86
+2025-09-24 12:30:26,718 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 12:30:26,719 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 12:30:26,719 - src.email_scheduler - INFO - 等待 30 秒...
+2025-09-24 12:30:56,773 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 12:30:57,311 - src.email_sender - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 19979fd254b2cf1d
+2025-09-24 12:30:57,384 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 12:30:57,385 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 12:30:57,385 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 12:31:28,442 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 12:31:28,949 - src.email_sender - INFO - 邮件发送成功: swipeupus.official@gmail.com, Message ID: 19979fda0a6268f3
+2025-09-24 12:31:29,003 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 12:31:29,003 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 12:31:29,004 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:05.197283
+2025-09-24 16:26:09,364 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:26:11,365 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-09-24 16:26:11,367 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-24 16:26:11,368 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 16:26:11,845 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 16:26:11,870 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:26:11,938 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:26:11,944 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 16:26:11,989 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 16:26:12,016 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:26:12,021 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 16:26:12,022 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 16:26:12,026 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 16:26:12,026 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 16:26:12,028 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 16:26:12,039 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:26:12,056 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-09-24 16:26:18,475 - src.email_sender - INFO - 包含图片的邮件发送成功: johnloneyy@gmail.com, Message ID: 1997ad49e0daf865
+2025-09-24 16:26:18,548 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 16:26:18,549 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 16:26:18,549 - src.email_scheduler - INFO - 等待 30 秒...
+2025-09-24 16:26:48,612 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 16:26:48,619 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:26:52,913 - src.email_sender - INFO - 包含图片的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 1997ad51e18a4dd5
+2025-09-24 16:26:52,980 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 16:26:52,981 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 16:26:52,981 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 16:27:24,041 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 16:27:24,050 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:27:26,833 - src.email_sender - INFO - 包含图片的邮件发送成功: swipeupus.official@gmail.com, Message ID: 1997ad5aa45d362b
+2025-09-24 16:27:26,885 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 16:27:26,885 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 16:27:26,885 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:14.858803
+2025-09-24 16:30:54,944 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:30:54,944 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 16:30:55,219 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 16:30:55,230 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:30:55,233 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:30:55,240 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 16:30:55,244 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 16:30:55,259 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:30:55,262 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 16:30:55,262 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 16:30:55,264 - src.excel_processor - INFO - 获取到 0 条待处理的数据记录
+2025-09-24 16:31:27,953 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:31:27,953 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 16:31:28,169 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 16:31:28,186 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:31:28,188 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 16:31:28,191 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 16:31:28,193 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 16:31:28,209 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 16:31:28,211 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 16:31:28,211 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 16:31:28,212 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 16:31:28,213 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 16:31:28,213 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 16:31:28,218 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:31:28,229 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-09-24 16:31:34,803 - src.email_sender - INFO - 包含图片的邮件发送成功: johnloneyy@gmail.com, Message ID: 1997ad972e4a9a7e
+2025-09-24 16:31:34,850 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 16:31:34,850 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 16:31:34,851 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 16:32:05,913 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 16:32:05,921 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:32:08,022 - src.email_sender - INFO - 包含图片的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 1997ad9f5d2115d1
+2025-09-24 16:32:08,077 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 16:32:08,077 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 16:32:08,078 - src.email_scheduler - INFO - 等待 30 秒...
+2025-09-24 16:32:38,145 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 16:32:38,153 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 16:32:41,043 - src.email_sender - INFO - 包含图片的邮件发送成功: swipeupus.official@gmail.com, Message ID: 1997ada7433f32c0
+2025-09-24 16:32:41,081 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 16:32:41,082 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 16:32:41,082 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:12.869188
+2025-09-24 17:20:53,891 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:20:53,891 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 17:20:54,110 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 17:20:54,123 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:20:54,125 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:20:54,128 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 17:20:54,131 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 17:20:54,149 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:20:54,150 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 17:20:54,151 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 17:20:54,152 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 17:20:54,152 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 17:20:54,152 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 17:20:54,158 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:20:54,227 - src.excel_processor - INFO - 邮箱状态更新失败: johnloneyy@gmail.com
+2025-09-24 17:20:54,227 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 附件验证失败: 无效文件: [test_data_with_templates.xlsx]
+2025-09-24 17:20:54,227 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 17:21:01,661 - src.email_scheduler - INFO - 邮件发送已停止
+2025-09-24 17:23:05,674 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:23:07,691 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-09-24 17:23:07,693 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-24 17:23:07,693 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 17:23:07,982 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 17:23:07,991 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:23:08,015 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:23:08,020 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 17:23:08,025 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 17:23:08,056 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:23:08,060 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 17:23:08,061 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 17:23:08,064 - src.excel_processor - INFO - 获取到 2 条待处理的数据记录
+2025-09-24 17:23:08,065 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 2
+2025-09-24 17:23:08,067 - src.email_scheduler - INFO - 发送邮件 (1/2): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 17:23:08,082 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:23:08,095 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-09-24 17:23:08,147 - src.attachment_manager - INFO - 附件加载成功: test_data_with_templates.xlsx (5528 bytes)
+2025-09-24 17:23:14,622 - src.email_sender - INFO - 包含附件的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 1997b08be32d70d5
+2025-09-24 17:23:14,682 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 17:23:14,682 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 17:23:14,683 - src.email_scheduler - INFO - 等待 30 秒...
+2025-09-24 17:23:44,725 - src.email_scheduler - INFO - 发送邮件 (2/2): swipeupus.official@gmail.com [English]
+2025-09-24 17:23:44,736 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:23:47,370 - src.email_sender - INFO - 包含附件的邮件发送成功: swipeupus.official@gmail.com, Message ID: 1997b093e4d61288
+2025-09-24 17:23:47,452 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 17:23:47,453 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 17:23:47,453 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 2, 失败 0, 耗时 0:00:39.388245
+2025-09-24 17:55:05,272 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:55:05,272 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 17:55:05,502 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 17:55:05,517 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:55:05,520 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 17:55:05,525 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 17:55:05,528 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 17:55:05,545 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 17:55:05,547 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 17:55:05,547 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 17:55:05,548 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 17:55:05,549 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 17:55:05,549 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 17:55:05,554 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:55:05,564 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-09-24 17:55:05,621 - src.attachment_manager - INFO - 附件加载成功: test_data_with_templates.xlsx (5528 bytes)
+2025-09-24 17:55:12,270 - src.email_sender - INFO - 包含附件的邮件发送成功: johnloneyy@gmail.com, Message ID: 1997b260309e7813
+2025-09-24 17:55:12,311 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 17:55:12,311 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 17:55:12,312 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 17:55:43,372 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 17:55:43,378 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:55:47,342 - src.email_sender - INFO - 包含附件的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 1997b268a1a585ca
+2025-09-24 17:55:47,413 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 17:55:47,414 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 17:55:47,414 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 17:56:18,500 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 17:56:18,508 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 17:56:21,299 - src.email_sender - INFO - 包含附件的邮件发送成功: swipeupus.official@gmail.com, Message ID: 1997b270f28c566e
+2025-09-24 17:56:21,352 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 17:56:21,353 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 17:56:21,353 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:15.804353
+2025-09-24 18:04:42,902 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 18:04:42,903 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-24 18:04:43,141 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test_data_with_templates.xlsx
+2025-09-24 18:04:43,155 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 18:04:43,171 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-24 18:04:43,175 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-24 18:04:43,178 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-24 18:04:43,212 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test_data_with_templates.xlsx, 共 3 行数据
+2025-09-24 18:04:43,214 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-09-24 18:04:43,215 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-09-24 18:04:43,217 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-09-24 18:04:43,218 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-09-24 18:04:43,219 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-09-24 18:04:43,228 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 18:04:43,246 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-09-24 18:04:43,323 - src.attachment_manager - INFO - 附件加载成功: test_data_with_templates.xlsx (5528 bytes)
+2025-09-24 18:04:50,975 - src.email_sender - INFO - 包含附件的邮件发送成功: johnloneyy@gmail.com, Message ID: 1997b2ed7cc9b6fa
+2025-09-24 18:04:51,009 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-24 18:04:51,009 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-24 18:04:51,009 - src.email_scheduler - INFO - 等待 31 秒...
+2025-09-24 18:05:22,058 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-09-24 18:05:22,066 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 18:05:24,470 - src.email_sender - INFO - 包含附件的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 1997b2f582f169a1
+2025-09-24 18:05:24,524 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-24 18:05:24,524 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-24 18:05:24,524 - src.email_scheduler - INFO - 等待 30 秒...
+2025-09-24 18:05:54,576 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-09-24 18:05:54,583 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-09-24 18:05:56,809 - src.email_sender - INFO - 包含附件的邮件发送成功: swipeupus.official@gmail.com, Message ID: 1997b2fd8168d33c
+2025-09-24 18:05:56,841 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-24 18:05:56,841 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-24 18:05:56,841 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:01:13.623799

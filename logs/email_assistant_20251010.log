@@ -1,0 +1,268 @@
+2025-10-10 17:41:18,173 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:41:39,276 - src.gmail_auth - ERROR - 刷新token失败: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002682C3296A0>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=120)'))
+2025-10-10 17:42:20,729 - google_auth_oauthlib.flow - INFO - "GET /?state=LxH1mtOPXYfYyHUvdDcollVxvh8CN2&code=4/0AVGzR1AtdxAzWF5Y-oj8QhNIqNLE4zHwAA-1dHmmYSyzzmXbFvg_lne_3DojRaNOptH8VQ&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2025-10-10 17:42:22,220 - src.gmail_auth - INFO - OAuth认证成功: junoliii98@gmail.com
+2025-10-10 17:42:22,229 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-10 17:42:22,231 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:42:23,090 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:42:23,116 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:42:23,221 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:42:23,230 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:42:23,258 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:42:23,295 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:42:23,304 - src.excel_processor - INFO - 过滤后的邮箱数量: 0
+2025-10-10 17:42:40,262 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:42:40,263 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:42:40,529 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:42:40,551 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:42:40,556 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:42:40,559 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:42:40,561 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:42:40,577 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:42:40,581 - src.excel_processor - INFO - 过滤后的邮箱数量: 0
+2025-10-10 17:43:13,154 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:43:13,155 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:43:13,461 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:43:13,487 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:43:13,496 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:43:13,503 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:43:13,507 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:43:13,524 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:43:13,530 - src.excel_processor - INFO - 过滤后的邮箱数量: 0
+2025-10-10 17:44:20,104 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:44:20,105 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:44:20,456 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:44:20,479 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:44:20,487 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:44:20,492 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:44:20,496 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:44:20,512 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:44:20,514 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:44:20,514 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:44:20,516 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:44:20,517 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:44:20,517 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:44:20,522 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:44:20,562 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-10-10 17:44:42,160 - src.email_sender - ERROR - 发送包含图片的邮件失败: johnloneyy@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:44:42,247 - src.excel_processor - INFO - 邮箱状态更新失败: johnloneyy@gmail.com
+2025-10-10 17:44:42,248 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:44:42,248 - src.email_scheduler - INFO - 等待 7 秒...
+2025-10-10 17:44:49,279 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:44:49,287 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:45:10,958 - src.email_sender - ERROR - 发送包含图片的邮件失败: tiktokshopnonstop@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:45:11,016 - src.excel_processor - INFO - 邮箱状态更新失败: tiktokshopnonstop@gmail.com
+2025-10-10 17:45:11,016 - src.email_scheduler - ERROR - 邮件发送失败: tiktokshopnonstop@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:45:11,016 - src.email_scheduler - INFO - 等待 7 秒...
+2025-10-10 17:45:18,046 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:45:18,052 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:45:39,615 - src.email_sender - ERROR - 发送包含图片的邮件失败: swipeupus.official@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:45:39,682 - src.excel_processor - INFO - 邮箱状态更新失败: swipeupus.official@gmail.com
+2025-10-10 17:45:39,683 - src.email_scheduler - ERROR - 邮件发送失败: swipeupus.official@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:45:39,683 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 0, 失败 3, 耗时 0:01:19.166510
+2025-10-10 17:46:51,899 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:46:51,900 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:46:52,547 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:46:52,563 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:46:52,641 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:46:52,646 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:46:52,665 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:46:52,680 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:46:52,700 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:46:52,700 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:46:52,703 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:46:52,703 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:46:52,704 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:46:52,711 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:46:52,743 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-10-10 17:47:14,303 - src.email_sender - ERROR - 发送包含图片的邮件失败: johnloneyy@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:47:14,387 - src.excel_processor - INFO - 邮箱状态更新失败: johnloneyy@gmail.com
+2025-10-10 17:47:14,388 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:47:14,388 - src.email_scheduler - INFO - 等待 5 秒...
+2025-10-10 17:47:19,413 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:47:19,423 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:47:30,313 - src.email_sender - INFO - 包含图片的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 199cd84b6db41443
+2025-10-10 17:47:30,355 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-10-10 17:47:30,355 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-10-10 17:47:30,355 - src.email_scheduler - INFO - 等待 7 秒...
+2025-10-10 17:47:37,387 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:47:37,397 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:47:46,232 - src.email_sender - INFO - 包含图片的邮件发送成功: swipeupus.official@gmail.com, Message ID: 199cd84f5a3132e7
+2025-10-10 17:47:46,272 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-10-10 17:47:46,272 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-10-10 17:47:46,272 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 2, 失败 1, 耗时 0:00:53.569232
+2025-10-10 17:48:38,007 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:48:38,007 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:48:38,351 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:48:38,360 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:48:38,365 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:48:38,368 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:48:38,370 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:48:38,380 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:48:38,382 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:48:38,382 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:48:38,385 - src.excel_processor - INFO - 获取到 0 条待处理的数据记录
+2025-10-10 17:49:13,981 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:49:13,982 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:49:14,268 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:49:14,283 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:49:14,290 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:49:14,297 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:49:14,301 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:49:14,321 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:49:14,324 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:49:14,325 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:49:14,327 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:49:14,327 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:49:14,328 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:49:14,333 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:49:14,344 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-10-10 17:49:46,363 - src.email_sender - INFO - 包含图片的邮件发送成功: johnloneyy@gmail.com, Message ID: 199cd86ca3e6bec6
+2025-10-10 17:49:46,449 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-10-10 17:49:46,449 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-10-10 17:49:46,450 - src.email_scheduler - INFO - 等待 9 秒...
+2025-10-10 17:49:55,494 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:49:55,507 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:49:55,508 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - tiktokshopnonstop@gmail.com
+2025-10-10 17:49:55,572 - src.excel_processor - INFO - 邮箱状态更新失败: tiktokshopnonstop@gmail.com
+2025-10-10 17:49:55,572 - src.email_scheduler - ERROR - 邮件发送失败: tiktokshopnonstop@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:49:55,573 - src.email_scheduler - INFO - 等待 5 秒...
+2025-10-10 17:50:00,597 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:50:00,606 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:50:04,938 - src.email_sender - INFO - 包含图片的邮件发送成功: swipeupus.official@gmail.com, Message ID: 199cd8712464e9cd
+2025-10-10 17:50:04,990 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-10-10 17:50:04,990 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-10-10 17:50:04,991 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 2, 失败 1, 耗时 0:00:50.663339
+2025-10-10 17:52:08,538 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:52:08,539 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:52:08,838 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:52:08,844 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:52:08,850 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:52:08,854 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:52:08,856 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:52:08,866 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:52:08,868 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:52:08,868 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:52:08,871 - src.excel_processor - INFO - 获取到 0 条待处理的数据记录
+2025-10-10 17:52:26,213 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:52:26,214 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:52:26,531 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:52:26,547 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:52:26,554 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:52:26,559 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:52:26,570 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:52:26,593 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:52:26,604 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:52:26,609 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:52:26,614 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:52:26,615 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:52:26,618 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:52:26,621 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:52:26,622 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - johnloneyy@gmail.com
+2025-10-10 17:52:26,644 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:52:26,644 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:52:26,645 - src.email_scheduler - INFO - 等待 8 秒...
+2025-10-10 17:52:34,681 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:52:34,687 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:52:34,688 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - tiktokshopnonstop@gmail.com
+2025-10-10 17:52:34,721 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:52:34,722 - src.email_scheduler - ERROR - 邮件发送失败: tiktokshopnonstop@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:52:34,722 - src.email_scheduler - INFO - 等待 2 秒...
+2025-10-10 17:52:36,731 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:52:36,740 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:52:36,741 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - swipeupus.official@gmail.com
+2025-10-10 17:52:36,760 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:52:36,760 - src.email_scheduler - ERROR - 邮件发送失败: swipeupus.official@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:52:36,761 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 0, 失败 3, 耗时 0:00:10.146119
+2025-10-10 17:55:42,065 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:55:42,066 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:55:42,511 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:55:42,537 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:55:42,544 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:55:42,549 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:55:42,552 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:55:42,567 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:55:42,571 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:55:42,572 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:55:42,574 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:55:42,574 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:55:42,575 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:55:42,580 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:55:42,581 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - johnloneyy@gmail.com
+2025-10-10 17:55:42,609 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:55:42,609 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:55:42,610 - src.email_scheduler - INFO - 等待 3 秒...
+2025-10-10 17:55:45,625 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:55:45,631 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:55:45,632 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - tiktokshopnonstop@gmail.com
+2025-10-10 17:55:45,662 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:55:45,662 - src.email_scheduler - ERROR - 邮件发送失败: tiktokshopnonstop@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:55:45,663 - src.email_scheduler - INFO - 等待 9 秒...
+2025-10-10 17:55:54,704 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:55:54,710 - src.template_manager - INFO - 处理HTML图片完成: 0 个图片
+2025-10-10 17:55:54,710 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - swipeupus.official@gmail.com
+2025-10-10 17:55:54,761 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:55:54,761 - src.email_scheduler - ERROR - 邮件发送失败: swipeupus.official@gmail.com, 错误: 发送包含附件的邮件失败: maximum recursion depth exceeded
+2025-10-10 17:55:54,762 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 0, 失败 3, 耗时 0:00:12.187851
+2025-10-10 17:57:00,870 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:57:00,871 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:57:01,182 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:57:01,208 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:57:01,217 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:57:01,224 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:57:01,227 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:57:01,242 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:57:01,244 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:57:01,245 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:57:01,246 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:57:01,247 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:57:01,247 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:57:01,251 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:57:01,263 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-10-10 17:57:10,422 - src.email_sender - INFO - 包含图片的邮件发送成功: johnloneyy@gmail.com, Message ID: 199cd8d916b3508f
+2025-10-10 17:57:10,457 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:57:10,458 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-10-10 17:57:10,458 - src.email_scheduler - INFO - 等待 3 秒...
+2025-10-10 17:57:13,471 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:57:13,487 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:57:20,169 - src.email_sender - INFO - 包含图片的邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 199cd8db6ca51c73
+2025-10-10 17:57:20,197 - src.excel_processor - ERROR - 更新邮箱状态失败: [Errno 13] Permission denied: 'files\\test_data_with_templates.xlsx'
+2025-10-10 17:57:20,197 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-10-10 17:57:20,197 - src.email_scheduler - INFO - 等待 8 秒...
+2025-10-10 17:57:28,230 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 17:57:28,237 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:57:31,383 - src.email_sender - INFO - 包含图片的邮件发送成功: swipeupus.official@gmail.com, Message ID: 199cd8de2cebe50e
+2025-10-10 17:57:31,449 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-10-10 17:57:31,450 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-10-10 17:57:31,450 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 3, 失败 0, 耗时 0:00:30.203305
+2025-10-10 17:59:13,842 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:59:13,842 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-10-10 17:59:14,271 - src.excel_processor - INFO - Excel文件验证成功: files\test_data_with_templates.xlsx
+2025-10-10 17:59:14,298 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:59:14,305 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-10 17:59:14,309 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-10 17:59:14,312 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-10 17:59:14,337 - src.excel_processor - INFO - 成功读取Excel文件: files\test_data_with_templates.xlsx, 共 3 行数据
+2025-10-10 17:59:14,340 - src.excel_processor - INFO - 过滤后的邮箱数量: 3
+2025-10-10 17:59:14,341 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', 'swipeupus.official@gmail.com']
+2025-10-10 17:59:14,343 - src.excel_processor - INFO - 获取到 3 条待处理的数据记录
+2025-10-10 17:59:14,343 - src.email_scheduler - INFO - 开始基于模板的邮件发送，总数: 3
+2025-10-10 17:59:14,344 - src.email_scheduler - INFO - 发送邮件 (1/3): johnloneyy@gmail.com [English]
+2025-10-10 17:59:14,352 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 17:59:14,366 - src.image_manager - INFO - 图片加载成功: 1 (1983062 bytes)
+2025-10-10 17:59:35,968 - src.email_sender - ERROR - 发送包含图片的邮件失败: johnloneyy@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:59:36,028 - src.excel_processor - INFO - 邮箱状态更新失败: johnloneyy@gmail.com
+2025-10-10 17:59:36,028 - src.email_scheduler - ERROR - 邮件发送失败: johnloneyy@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 17:59:36,028 - src.email_scheduler - INFO - 等待 6 秒...
+2025-10-10 17:59:42,059 - src.email_scheduler - INFO - 发送邮件 (2/3): tiktokshopnonstop@gmail.com [Spanish]
+2025-10-10 17:59:42,067 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 18:00:03,680 - src.email_sender - ERROR - 发送包含图片的邮件失败: tiktokshopnonstop@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 18:00:03,726 - src.excel_processor - INFO - 邮箱状态更新失败: tiktokshopnonstop@gmail.com
+2025-10-10 18:00:03,726 - src.email_scheduler - ERROR - 邮件发送失败: tiktokshopnonstop@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 18:00:03,727 - src.email_scheduler - INFO - 等待 9 秒...
+2025-10-10 18:00:12,771 - src.email_scheduler - INFO - 发送邮件 (3/3): swipeupus.official@gmail.com [English]
+2025-10-10 18:00:12,791 - src.template_manager - INFO - 处理HTML图片完成: 1 个图片
+2025-10-10 18:00:34,841 - src.email_sender - ERROR - 发送包含图片的邮件失败: swipeupus.official@gmail.com, 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 18:00:34,900 - src.excel_processor - INFO - 邮箱状态更新失败: swipeupus.official@gmail.com
+2025-10-10 18:00:34,901 - src.email_scheduler - ERROR - 邮件发送失败: swipeupus.official@gmail.com, 错误: 发送包含图片的邮件时发生未知错误: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+2025-10-10 18:00:34,902 - src.email_scheduler - INFO - 模板邮件发送完成: 成功 0, 失败 3, 耗时 0:01:20.558789

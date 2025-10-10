@@ -1,0 +1,33 @@
+2025-09-23 22:25:44,627 - google_auth_oauthlib.flow - INFO - "GET /?state=p0Gx8waj7XlH2jT2HdGw5rPYLuykLf&code=4/0AVGzR1DRwzv7rNU-PnYSPU0iPWnXe6tYq2pacDIrQ1OMRNsBf63XkuFa6tQCqt-v_lg_ag&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2025-09-23 22:25:46,648 - src.gmail_auth - INFO - OAuth认证成功: junoliii98@gmail.com
+2025-09-23 22:25:46,656 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-09-23 22:25:46,658 - src.email_assistant - INFO - 邮箱认证成功: junoliii98@gmail.com
+2025-09-23 22:25:47,389 - src.excel_processor - INFO - Excel文件验证成功: D:\Email Assistant\test\test.xlsx
+2025-09-23 22:25:47,418 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-09-23 22:25:47,436 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-09-23 22:25:47,466 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-09-23 22:25:47,500 - src.excel_processor - INFO - 成功读取Excel文件: D:\Email Assistant\test\test.xlsx, 共 4 行数据
+2025-09-23 22:25:47,503 - src.excel_processor - INFO - 过滤后的邮箱数量: 4
+2025-09-23 22:25:47,504 - src.excel_processor - INFO - 待发送邮箱列表: ['johnloneyy@gmail.com', 'tiktokshopnonstop@gmail.com', '734388042@qq.com', 'swipeupus.official@gmail.com']
+2025-09-23 22:25:47,505 - src.excel_processor - INFO - 待发送邮箱数量: 4
+2025-09-23 22:25:47,506 - src.email_scheduler - INFO - 开始发送邮件，总数: 4
+2025-09-23 22:25:47,506 - src.email_scheduler - INFO - 正在发送邮件 1/4: johnloneyy@gmail.com
+2025-09-23 22:25:51,501 - src.email_sender - INFO - 邮件发送成功: johnloneyy@gmail.com, Message ID: 19976f76f32ad9bb
+2025-09-23 22:25:51,585 - src.excel_processor - INFO - 邮箱状态更新成功: johnloneyy@gmail.com
+2025-09-23 22:25:51,586 - src.email_scheduler - INFO - 邮件发送成功: johnloneyy@gmail.com
+2025-09-23 22:25:51,587 - src.email_scheduler - INFO - 等待 40 秒后发送下一封邮件
+2025-09-23 22:26:31,592 - src.email_scheduler - INFO - 正在发送邮件 2/4: tiktokshopnonstop@gmail.com
+2025-09-23 22:26:32,009 - src.email_sender - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com, Message ID: 19976f80dfd2dcd0
+2025-09-23 22:26:32,083 - src.excel_processor - INFO - 邮箱状态更新成功: tiktokshopnonstop@gmail.com
+2025-09-23 22:26:32,083 - src.email_scheduler - INFO - 邮件发送成功: tiktokshopnonstop@gmail.com
+2025-09-23 22:26:32,084 - src.email_scheduler - INFO - 等待 36 秒后发送下一封邮件
+2025-09-23 22:27:08,174 - src.email_scheduler - INFO - 正在发送邮件 3/4: 734388042@qq.com
+2025-09-23 22:27:08,598 - src.email_sender - INFO - 邮件发送成功: 734388042@qq.com, Message ID: 19976f89cf1b219b
+2025-09-23 22:27:08,657 - src.excel_processor - INFO - 邮箱状态更新成功: 734388042@qq.com
+2025-09-23 22:27:08,657 - src.email_scheduler - INFO - 邮件发送成功: 734388042@qq.com
+2025-09-23 22:27:08,658 - src.email_scheduler - INFO - 等待 38 秒后发送下一封邮件
+2025-09-23 22:27:46,733 - src.email_scheduler - INFO - 正在发送邮件 4/4: swipeupus.official@gmail.com
+2025-09-23 22:27:47,173 - src.email_sender - INFO - 邮件发送成功: swipeupus.official@gmail.com, Message ID: 19976f93300196c7
+2025-09-23 22:27:47,220 - src.excel_processor - INFO - 邮箱状态更新成功: swipeupus.official@gmail.com
+2025-09-23 22:27:47,220 - src.email_scheduler - INFO - 邮件发送成功: swipeupus.official@gmail.com
+2025-09-23 22:27:47,221 - src.email_scheduler - INFO - 邮件发送完成: {'success': True, 'total': 4, 'success_count': 4, 'failed_count': 0, 'duration': '0:01:59.830957', 'start_time': '2025-09-23T22:25:47.390063', 'end_time': '2025-09-23T22:27:47.221020'}

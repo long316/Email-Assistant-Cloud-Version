@@ -1,0 +1,4 @@
+﻿# OAuth tokens / credentials (keep locally only)
+token*.json
+demo/token.json
+credentials*.json

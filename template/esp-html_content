@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Colaboración</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+
+        <p>Hola [达人ID],</p>
+
+        <p>[钩子]</p>
+
+        <p>Soy Erica, fundadora de Swipe Up US (Vida al Aire Libre y Esenciales). Acabamos de lanzar una linterna multifuncional que recientemente fue clasificada entre las principales innovaciones de equipos para exteriores de este año.</p>
+
+        <!-- Product Image -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img id="1" alt="Linterna Multifuncional" style="max-width: 300px; height: auto; border: 1px solid #eee; border-radius: 8px;" />
+        </div>
+
+        <p>Creo que tu estilo de contenido y tu audiencia serían una combinación perfecta para nuestro producto. ¿Te interesaría explorar una oportunidad de colaboración?</p>
+
+        <p>Aquí tienes algunos detalles sobre la colaboración:</p>
+        <ul>
+            <li>Tasas de comisión competitivas</li>
+            <li>Códigos de descuento exclusivos para tu audiencia</li>
+            <li>Materiales promocionales de alta calidad proporcionados</li>
+            <li>Envío rápido y confiable a nivel mundial</li>
+        </ul>
+
+        <p>Me encantaría discutir esto más a fondo y responder cualquier pregunta que puedas tener. ¡Por favor házmelo saber si estás interesado!</p>
+
+        <p>Espero tu respuesta.</p>
+
+        <p>Saludos cordiales,<br>
+        Erica Johnson<br>
+        Fundadora, Swipe Up US<br>
+        Email: erica@swipeupus.com<br>
+        Teléfono: +1 (555) 123-4567</p>
+
+        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+        <p style="font-size: 12px; color: #888;">
+            Este email fue enviado por nuestro sistema automatizado de alcance de colaboraciones. Si tienes alguna pregunta o inquietud, por favor responde a este email.
+        </p>
+    </div>
+</body>
+</html>
