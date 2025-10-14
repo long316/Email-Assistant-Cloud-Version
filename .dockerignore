@@ -1,0 +1,16 @@
+__pycache__/
+.venv/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+node_modules/
+secrets/
+token_*.json
+logs/
+files/
+test/
+*.xlsx
+*.csv
+

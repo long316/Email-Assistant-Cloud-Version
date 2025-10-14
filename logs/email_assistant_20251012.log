@@ -1,0 +1,90 @@
+2025-10-12 12:57:33,214 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 12:57:33,216 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 12:57:33,219 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 12:57:34,366 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 12:57:34,369 - werkzeug - INFO -  * Debugger PIN: 545-814-829
+2025-10-12 12:57:58,544 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 12:57:58,546 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 12:57:58,548 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 12:57:59,643 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 12:57:59,646 - werkzeug - INFO -  * Debugger PIN: 545-814-829
+2025-10-12 12:58:39,430 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:58:39] "GET /api/health HTTP/1.1" 200 -
+2025-10-12 12:58:39,662 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:58:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-12 12:58:57,245 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:58:57] "[33mGET /api/db/healt HTTP/1.1[0m" 404 -
+2025-10-12 12:59:29,139 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:59:29] "[33mGET /api/db/healt HTTP/1.1[0m" 404 -
+2025-10-12 12:59:29,946 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:59:29] "[33mGET /api/db/healt HTTP/1.1[0m" 404 -
+2025-10-12 12:59:33,023 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:59:33] "GET /api/health HTTP/1.1" 200 -
+2025-10-12 12:59:34,256 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:59:34] "GET /api/health HTTP/1.1" 200 -
+2025-10-12 12:59:36,836 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 12:59:36] "[33mGET /api/db/healt HTTP/1.1[0m" 404 -
+2025-10-12 19:46:36,567 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 19:46:36,568 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 19:46:36,574 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 19:46:38,203 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 19:46:38,211 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 19:47:13,986 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:47:13] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:47:14,249 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:47:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-12 19:52:02,604 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 19:52:02,605 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 19:52:02,609 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 19:52:04,354 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 19:52:04,358 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 19:52:12,112 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:52:12] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:52:13,155 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:52:13] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:52:18,156 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:52:18] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:53:10,111 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:53:10] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:53:10,216 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:53:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-12 19:55:08,463 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 19:55:08,465 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 19:55:08,469 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 19:55:10,459 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 19:55:10,465 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 19:55:32,023 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:32] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:55:32,948 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:32] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:55:33,795 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:33] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:55:34,474 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:34] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:55:35,040 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:35] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:55:36,946 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 19:55:36] "[35m[1mGET /api/db/health HTTP/1.1[0m" 500 -
+2025-10-12 19:58:45,227 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\config.py', reloading
+2025-10-12 19:58:45,485 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 19:58:47,570 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 19:58:47,576 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 20:00:39,792 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 20:00:39,793 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 20:00:39,795 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 20:00:41,482 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 20:00:41,490 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 20:00:46,728 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:00:46] "GET /api/db/health HTTP/1.1" 200 -
+2025-10-12 20:03:00,757 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:03:00] "[32mGET /oauth/google/authorize?sender_email=junoliii98@gmail.com&master_user_id=1&store_id=2&return_url=http://127.0.0.1:5000/api/health HTTP/1.1[0m" 302 -
+2025-10-12 20:03:13,496 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:03:13] "[32mGET /oauth/google/authorize?sender_email=junoliii98@gmail.com&master_user_id=1&store_id=2&return_url=http://127.0.0.1:5000/api/health HTTP/1.1[0m" 302 -
+2025-10-12 20:06:53,344 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-12 20:06:55,736 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2025-10-12 20:06:55,739 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:06:55] "[35m[1mGET /oauth/google/callback?state=eyJzZW5kZXIiOiJqdW5vbGlpaTk4QGdtYWlsLmNvbSIsIm11IjoxLCJzdG9yZSI6MiwicmV0dXJuX3VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMC9hcGkvaGVhbHRoIn0&code=4/0AVGzR1CUBnEtnWlr_CvdpveBBv_FWPnWqjZEd1MHHOCVD8Jgz5ivHsGP2i7Y-1c7u0ngXA&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1[0m" 500 -
+2025-10-12 20:06:55,971 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:06:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-12 20:13:56,856 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:13:56] "[32mGET /oauth/google/authorize?sender_email=junoliii98@gmail.com&master_user_id=1&store_id=2&return_url=http://127.0.0.1:5000/api/health HTTP/1.1[0m" 302 -
+2025-10-12 20:14:26,877 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-12 20:14:29,760 - googleapiclient.http - WARNING - Encountered 403 Forbidden with reason "insufficientPermissions"
+2025-10-12 20:14:29,765 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:14:29] "[35m[1mGET /oauth/google/callback?state=eyJzZW5kZXIiOiJqdW5vbGlpaTk4QGdtYWlsLmNvbSIsIm11IjoxLCJzdG9yZSI6MiwicmV0dXJuX3VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMC9hcGkvaGVhbHRoIn0&code=4/0AVGzR1AItR01FObdBEGhd9zBhxZtP_aMbv443CH2HzgBOMIX3bUFUr_wiES3HnzKwXD-CQ&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1[0m" 500 -
+2025-10-12 20:17:33,651 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\gmail_auth.py', reloading
+2025-10-12 20:17:33,876 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 20:17:35,998 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 20:17:36,001 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 20:19:05,180 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:19:05] "[32mGET /oauth/google/authorize?sender_email=junoliii98@gmail.com&master_user_id=1&store_id=2&return_url=http://127.0.0.1:5000/api/health HTTP/1.1[0m" 302 -
+2025-10-12 20:19:28,237 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-12 20:19:31,175 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:19:31] "[32mGET /oauth/google/callback?state=eyJzZW5kZXIiOiJqdW5vbGlpaTk4QGdtYWlsLmNvbSIsIm11IjoxLCJzdG9yZSI6MiwicmV0dXJuX3VybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMC9hcGkvaGVhbHRoIn0&code=4/0AVGzR1CvoshgiK1_zhI9vb6QwziqWP8O06LpIgMyTv7HkknRN6tB50KzNbc4_TUdsaA0JA&scope=https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.send HTTP/1.1[0m" 302 -
+2025-10-12 20:19:31,183 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:19:31] "GET /api/health?success=1&email=junoliii98@gmail.com HTTP/1.1" 200 -
+2025-10-12 20:23:02,037 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:23:02] "[31m[1mPOST /api/templates HTTP/1.1[0m" 401 -
+2025-10-12 20:23:54,673 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:23:54] "[35m[1mPOST /api/templates HTTP/1.1[0m" 500 -
+2025-10-12 20:29:22,326 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:29:22] "POST /api/templates HTTP/1.1" 200 -
+2025-10-12 20:36:57,853 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 20:36:57,854 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 20:36:57,855 - werkzeug - INFO -  * Restarting with stat
+2025-10-12 20:36:58,986 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 20:36:58,989 - werkzeug - INFO -  * Debugger PIN: 883-169-498
+2025-10-12 20:52:18,579 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 20:52:18] "POST /api/assets HTTP/1.1" 200 -

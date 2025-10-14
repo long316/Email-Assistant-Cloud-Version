@@ -2,3 +2,7 @@
 token*.json
 demo/token.json
 credentials*.json
+# secrets (never commit)
+.env
+.env.local
+*.env

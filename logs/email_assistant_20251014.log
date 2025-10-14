@@ -1,0 +1,169 @@
+2025-10-14 11:11:14,580 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-14 11:11:14,580 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 11:11:14,585 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:11:15,989 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:11:15,993 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:11:54,327 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:11:54] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:11:54,800 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:11:56,127 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-14 11:11:56,129 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 11:11:56,140 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:11:56,169 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:31:56,331 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-14 11:31:56,332 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 11:31:56,334 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:31:57,516 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:31:57,518 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:33:15,991 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:33:15] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:33:16,397 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:33:16,401 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:33:16,403 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:39:25,486 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 11:39:25,663 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:39:26,926 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:39:26,930 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:41:32,101 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:41:32] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:41:32,515 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:41:32,522 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:41:32,529 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:41:32,532 - src.email_scheduler - ERROR - Job e9861224-b9f6-43fa-a0e0-ac5741135897 failed: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2025-10-14 11:43:22,564 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 11:43:22,737 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:43:23,995 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:43:23,998 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:44:25,831 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:44:25] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:44:26,225 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:44:26,230 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:44:26,234 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:44:26,629 - src.email_sender - ERROR - 发送包含附件的邮件失败: maximum recursion depth exceeded - johnloneyy@gmail.com
+2025-10-14 11:50:00,407 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 11:50:00,583 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:50:01,891 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:50:01,893 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:52:17,476 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:52:17] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:52:17,877 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:52:17,883 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:52:17,886 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:52:18,287 - src.email_sender - ERROR - 创建邮件消息失败: name 'attachments' is not defined
+2025-10-14 11:55:32,319 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 11:55:32,565 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:55:33,941 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:55:33,946 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:57:10,249 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:57:10] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:57:10,645 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:57:10,649 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:57:10,653 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 11:58:56,288 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-14 11:58:56,289 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 11:58:56,290 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 11:58:57,579 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 11:58:57,581 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 11:59:56,852 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 11:59:56] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 11:59:57,234 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 11:59:57,240 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 11:59:57,257 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 12:08:26,810 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 12:08:26] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 12:08:27,203 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 12:08:28,593 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-14 12:08:28,594 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 12:08:28,599 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 12:08:28,604 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 12:08:29,039 - src.attachment_manager - INFO - 附件加载成功: product_catalog.pdf (85308 bytes)
+2025-10-14 12:08:32,225 - src.email_sender - INFO - 包含附件的邮件发送成功: johnloneyy@gmail.com, Message ID: 199e0e7ce6815ace
+2025-10-14 12:16:16,354 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 12:16:16] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 12:16:16,760 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 12:16:16,764 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 12:16:16,770 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 12:35:25,652 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\dao_mysql.py', reloading
+2025-10-14 12:35:25,829 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 12:35:27,095 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 12:35:27,097 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 12:36:19,673 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\api_v2.py', reloading
+2025-10-14 12:36:19,839 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 12:36:21,024 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 12:36:21,027 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 12:36:30,557 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\api_server.py', reloading
+2025-10-14 12:36:30,750 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 12:36:32,053 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 12:36:32,055 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 13:50:24,233 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 13:50:24] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 13:50:25,584 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 13:50:30,593 - src.gmail_auth - ERROR - 刷新token失败: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2025-10-14 13:51:20,213 - google_auth_oauthlib.flow - INFO - "GET /?state=YoTfNXtV6MchgiZkjPul4Nbqs7Bojq&code=4/0AVGzR1Ban2NpDdfS9D2HRZoPXM-FSIfiWODqeOCvAR8eK_styXCrrdCphK_YHbwNqwMtkw&scope=https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2025-10-14 13:51:21,570 - src.gmail_auth - INFO - OAuth认证成功: junoliii98@gmail.com
+2025-10-14 13:51:21,572 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 13:51:21,583 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 13:51:21,627 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 13:52:24,320 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 13:52:24] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 13:52:26,711 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 13:52:26,714 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 13:52:26,717 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 13:54:20,255 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 13:54:20] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 13:54:22,770 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 13:54:22,772 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 13:54:22,775 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 14:42:53,531 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-14 14:42:53,532 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 14:42:53,534 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 14:42:54,915 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 14:42:54,917 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 14:43:43,111 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:43:43] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 14:43:44,689 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 14:43:44,699 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 14:43:44,711 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 14:45:39,100 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:45:39] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 14:45:41,159 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 14:45:41,165 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 14:45:41,169 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 14:50:33,870 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 14:50:34,057 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 14:50:35,310 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 14:50:35,314 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 14:52:22,515 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:52:22] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 14:52:23,592 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 14:52:24,897 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-14 14:52:24,898 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 14:52:24,901 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 14:52:24,903 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 14:55:41,121 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:55:41] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 14:55:44,252 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 14:55:44,255 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 14:55:44,259 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:01:11,395 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:01:11] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:01:12,909 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:01:12,913 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:01:12,916 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:04:50,483 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:04:50] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:04:51,799 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:04:51,803 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:04:51,809 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:23:05,599 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 15:23:05,787 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 15:23:07,035 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 15:23:07,038 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 15:24:34,852 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:24:34] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:24:36,162 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:24:36,167 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:24:36,170 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:26:36,390 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:26:36] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:26:38,846 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:26:38,850 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:26:38,852 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:27:37,727 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:27:37] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:27:38,932 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:27:38,935 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:27:38,938 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:29:37,915 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:29:37] "GET /api/jobs/14d35d14-3c48-44c1-bb6f-4020a106b817/events HTTP/1.1" 200 -
+2025-10-14 15:29:38,154 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:29:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-14 15:32:06,275 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:32:06] "POST /api/assets HTTP/1.1" 200 -
+2025-10-14 15:33:06,218 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:33:06] "POST /api/assets HTTP/1.1" 200 -
+2025-10-14 15:33:38,031 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:33:38] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:33:38,853 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:33:38,858 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:33:38,866 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 15:37:22,487 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-14 15:37:22,669 - werkzeug - INFO -  * Restarting with stat

@@ -173,7 +173,8 @@ class EmailAssistant:
                 subject=subject,
                 content=content,
                 html_content=html_content,
-                start_time=start_time
+                start_time=start_time,
+                attachments=attachments
             )
 
             return result

@@ -1,0 +1,934 @@
+openapi: 3.0.3
+info:
+  title: Email Assistant API
+  version: 1.0.0
+  description: |
+    REST API for the Email Assistant used by the Influencer Management System.
+    Notes:
+    - Write endpoints require an API key in header `X-API-Key` when configured.
+    - OAuth web flow is provided to bind Gmail sender accounts.
+servers:
+  - url: /
+    description: Relative server (behind your domain/proxy)
+tags:
+  - name: Health
+  - name: OAuth
+  - name: Send
+  - name: Templates
+  - name: Assets
+  - name: Jobs
+  - name: TemplateFiles
+  - name: Senders
+  - name: Control
+  - name: Utility
+  - name: Database
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: ok
+        timestamp:
+          type: string
+          format: date-time
+    SendEmailsRequest:
+      type: object
+      required: [sender_email, excel_file_path]
+      properties:
+        sender_email:
+          type: string
+          format: email
+        excel_file_path:
+          type: string
+        subject:
+          type: string
+        content:
+          type: string
+        html_content:
+          type: string
+        attachments:
+          type: array
+          items:
+            type: string
+          description: Attachment file IDs under files/
+        start_time:
+          type: string
+          format: date-time
+        min_interval:
+          type: integer
+          default: 20
+        max_interval:
+          type: integer
+          default: 90
+    SendEmailsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        total:
+          type: integer
+        success_count:
+          type: integer
+        failed_count:
+          type: integer
+        duration:
+          type: string
+        start_time:
+          type: string
+        end_time:
+          type: string
+    TemplateSendRequest:
+      type: object
+      required: [sender_email, excel_file_path]
+      properties:
+        sender_email:
+          type: string
+          format: email
+        excel_file_path:
+          type: string
+        attachments:
+          type: array
+          items:
+            type: string
+        start_time:
+          type: string
+          format: date-time
+        min_interval:
+          type: integer
+          default: 20
+        max_interval:
+          type: integer
+          default: 90
+    TemplateSendResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        stats:
+          type: object
+        duration:
+          type: string
+        status:
+          type: string
+    StatusResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        status:
+          type: object
+          properties:
+            status:
+              type: string
+              example: running
+            start_time:
+              type: string
+              nullable: true
+            pause_time:
+              type: string
+              nullable: true
+            stats:
+              type: object
+            running_duration:
+              type: string
+              nullable: true
+paths:
+  /api/health:
+    get:
+      tags: [Health]
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+  /api/authenticate:
+    post:
+      tags: [OAuth]
+      summary: Authenticate sender (legacy/local)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [sender_email]
+              properties:
+                sender_email:
+                  type: string
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /oauth/google/authorize:
+    get:
+      tags: [OAuth]
+      summary: Start Google OAuth (redirect)
+      parameters:
+        - in: query
+          name: sender_email
+          required: true
+          schema:
+            type: string
+      responses:
+        '302':
+          description: Redirect to Google consent page
+  /oauth/google/callback:
+    get:
+      tags: [OAuth]
+      summary: OAuth callback (exchange code for token)
+      parameters:
+        - in: query
+          name: code
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: state
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Binding result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  email:
+                    type: string
+  /api/validate_excel:
+    post:
+      tags: [Utility]
+      summary: Validate Excel file
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [excel_file_path]
+              properties:
+                excel_file_path:
+                  type: string
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /api/preview:
+    post:
+      tags: [Utility]
+      summary: Preview pending emails from Excel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [excel_file_path]
+              properties:
+                excel_file_path:
+                  type: string
+      responses:
+        '200':
+          description: Preview data
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/send_emails:
+    post:
+      tags: [Send]
+      summary: Send emails (classic mode)
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendEmailsRequest'
+      responses:
+        '200':
+          description: Send result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendEmailsResponse'
+        '401':
+          description: Unauthorized (missing/invalid API key)
+  /api/send_template_emails:
+    post:
+      tags: [Send]
+      summary: Send emails using templates
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TemplateSendRequest'
+      responses:
+        '200':
+          description: Send result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TemplateSendResponse'
+        '401':
+          description: Unauthorized (missing/invalid API key)
+  /api/status:
+    get:
+      tags: [Control]
+      summary: Get scheduler status (global)
+      responses:
+        '200':
+          description: Status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+  /api/pause:
+    post:
+      tags: [Control]
+      summary: Pause sending
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /api/resume:
+    post:
+      tags: [Control]
+      summary: Resume sending
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /api/stop:
+    post:
+      tags: [Control]
+      summary: Stop sending
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /api/statistics:
+    post:
+      tags: [Utility]
+      summary: Get statistics from Excel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [excel_file_path]
+              properties:
+                excel_file_path:
+                  type: string
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/validate_templates:
+    post:
+      tags: [Templates]
+      summary: Validate templates against Excel columns
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [excel_file_path]
+              properties:
+                excel_file_path:
+                  type: string
+      responses:
+        '200':
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/preview_template_emails:
+    post:
+      tags: [Templates]
+      summary: Preview template-rendered emails
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [excel_file_path]
+              properties:
+                excel_file_path:
+                  type: string
+                max_previews:
+                  type: integer
+                  default: 3
+      responses:
+        '200':
+          description: Preview result
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /api/templates:
+    post:
+      tags: [Templates]
+      summary: Create template (minimal CRUD)
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [master_user_id, store_id, name, language, subject, html_content]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                name: { type: string }
+                language: { type: string }
+                subject: { type: string }
+                html_content: { type: string }
+                text_content: { type: string }
+                version: { type: integer }
+                is_active: { type: boolean }
+      responses:
+        '200':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  id: { type: integer }
+    get:
+      tags: [Templates]
+      summary: List templates by tenant
+      parameters:
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50 }
+        - in: query
+          name: offset
+          schema: { type: integer, default: 0 }
+      responses:
+        '200':
+          description: List
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  items:
+                    type: array
+                    items: { type: object }
+
+  /api/templates/{id}:
+    get:
+      tags: [Templates]
+      summary: Get template detail
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: OK }
+        '404': { description: Not found }
+    put:
+      tags: [Templates]
+      summary: Update template
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [master_user_id, store_id]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                name: { type: string }
+                language: { type: string }
+                subject: { type: string }
+                html_content: { type: string }
+                text_content: { type: string }
+                version: { type: integer }
+                is_active: { type: boolean }
+      responses:
+        '200': { description: Updated }
+        '404': { description: Not found }
+    delete:
+      tags: [Templates]
+      summary: Delete template
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Deleted }
+        '404': { description: Not found }
+
+  /api/assets:
+    post:
+      tags: [Assets]
+      summary: Upload asset (image or attachment)
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [master_user_id, store_id, asset_type, file]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                asset_type: { type: string, enum: [image, attachment] }
+                file_id: { type: string }
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200': { description: Uploaded }
+
+  /api/jobs/send_template_emails:
+    post:
+      tags: [Jobs]
+      summary: Create and run a template email job (JSON recipients)
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [master_user_id, store_id, sender_email, recipients]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                sender_email: { type: string, format: email }
+                template_id: { type: integer, description: "Deprecated; prefer language-based file templates" }
+                recipients:
+                  type: array
+                  items:
+                    type: object
+                    required: [to_email]
+                    properties:
+                      to_email: { type: string, format: email }
+                      language: { type: string }
+                      variables: { type: object }
+                attachments:
+                  type: array
+                  items: { type: string }
+                min_interval: { type: integer, default: 20 }
+                max_interval: { type: integer, default: 90 }
+                start_time: { type: string, description: "ISO datetime; <= now executes immediately" }
+                webhook_url: { type: string }
+      responses:
+        '200': { description: Job queued }
+
+  /api/jobs/send_emails:
+    post:
+      tags: [Jobs]
+      summary: Create and run a custom email job (JSON recipients)
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [master_user_id, store_id, sender_email, subject, content, recipients]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                sender_email: { type: string, format: email }
+                subject: { type: string }
+                content: { type: string }
+                html_content: { type: string }
+                recipients:
+                  type: array
+                  items:
+                    type: object
+                    required: [to_email]
+                    properties:
+                      to_email: { type: string, format: email }
+                      language: { type: string }
+                      variables: { type: object }
+                attachments:
+                  type: array
+                  items: { type: string }
+                min_interval: { type: integer, default: 20 }
+                max_interval: { type: integer, default: 90 }
+                start_time: { type: string, description: "ISO datetime; <= now executes immediately" }
+                webhook_url: { type: string }
+      responses:
+        '200': { description: Job queued }
+
+  /api/jobs/{job_id}:
+    get:
+      tags: [Jobs]
+      summary: Get job summary
+      parameters:
+        - in: path
+          name: job_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK }
+        '404': { description: Not found }
+
+  /api/jobs/{job_id}/events:
+    get:
+      tags: [Jobs]
+      summary: List job events (timeline)
+      parameters:
+        - in: path
+          name: job_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK }
+
+  /api/jobs/{job_id}/pause:
+    post:
+      tags: [Jobs]
+      summary: Pause a running job
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: job_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Paused }
+
+  /api/jobs/{job_id}/resume:
+    post:
+      tags: [Jobs]
+      summary: Resume a paused job
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: job_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Resumed }
+
+  /api/jobs/{job_id}/cancel:
+    post:
+      tags: [Jobs]
+      summary: Cancel a job (stop further processing)
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: job_id
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Canceled }
+
+  /api/template_files:
+    post:
+      tags: [TemplateFiles]
+      summary: Upload or replace a language template file
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [master_user_id, store_id, language, kind, file]
+              properties:
+                master_user_id: { type: integer }
+                store_id: { type: integer }
+                language: { type: string, description: "e.g. en, es, fr" }
+                kind: { type: string, enum: [subject, content] }
+                file: { type: string, format: binary }
+      responses:
+        '200': { description: Saved }
+    get:
+      tags: [TemplateFiles]
+      summary: List available languages of templates
+      parameters:
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: List }
+
+  /api/template_files/{language}:
+    get:
+      tags: [TemplateFiles]
+      summary: Preview a language template
+      parameters:
+        - in: path
+          name: language
+          required: true
+          schema: { type: string }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: OK }
+    delete:
+      tags: [TemplateFiles]
+      summary: Delete subject/content (or both) of a language
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: language
+          required: true
+          schema: { type: string }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: kind
+          schema: { type: string, enum: [subject, content] }
+      responses:
+        '200': { description: Deleted }
+
+  /api/assets:
+    get:
+      tags: [Assets]
+      summary: List assets by tenant
+      parameters:
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: asset_type
+          schema: { type: string, enum: [image, attachment] }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50 }
+        - in: query
+          name: offset
+          schema: { type: integer, default: 0 }
+      responses:
+        '200': { description: OK }
+
+  /api/assets/{id}:
+    get:
+      tags: [Assets]
+      summary: Get asset detail
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: OK }
+        '404': { description: Not found }
+    delete:
+      tags: [Assets]
+      summary: Delete asset
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Deleted }
+        '404': { description: Not found }
+
+  /api/senders:
+    get:
+      tags: [Senders]
+      summary: List sender accounts
+      parameters:
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: OK }
+
+  /api/senders/{id}:
+    delete:
+      tags: [Senders]
+      summary: Delete(unbind) a sender account
+      security:
+        - ApiKeyAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: integer }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Deleted }
+        '404': { description: Not found }
+  /api/db/health:
+    get:
+      tags: [Database]
+      summary: Database connectivity check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  result:
+                    type: integer
+        '500':
+          description: DB error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  error:
+                    type: string

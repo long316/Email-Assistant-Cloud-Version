@@ -1,0 +1,34 @@
+2025-10-13 15:14:00,180 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-13 15:14:00,181 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-13 15:14:00,184 - werkzeug - INFO -  * Restarting with stat
+2025-10-13 15:14:02,167 - werkzeug - WARNING -  * Debugger is active!
+2025-10-13 15:14:02,184 - werkzeug - INFO -  * Debugger PIN: 796-100-735
+2025-10-13 17:12:12,324 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 17:12:12] "POST /api/assets HTTP/1.1" 200 -
+2025-10-13 20:47:03,390 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\api_v2.py', reloading
+2025-10-13 20:47:03,722 - werkzeug - INFO -  * Restarting with stat
+2025-10-13 20:47:07,716 - werkzeug - WARNING -  * Debugger is active!
+2025-10-13 20:47:07,722 - werkzeug - INFO -  * Debugger PIN: 796-100-735
+2025-10-13 20:47:28,070 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-13 20:47:28,276 - werkzeug - INFO -  * Restarting with stat
+2025-10-13 20:47:30,437 - werkzeug - WARNING -  * Debugger is active!
+2025-10-13 20:47:30,441 - werkzeug - INFO -  * Debugger PIN: 796-100-735
+2025-10-13 20:47:43,262 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
+2025-10-13 20:47:43,471 - werkzeug - INFO -  * Restarting with stat
+2025-10-13 20:47:45,578 - werkzeug - WARNING -  * Debugger is active!
+2025-10-13 20:47:45,583 - werkzeug - INFO -  * Debugger PIN: 796-100-735
+2025-10-13 20:48:07,915 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\api_v2.py', reloading
+2025-10-13 20:48:08,151 - werkzeug - INFO -  * Restarting with stat
+2025-10-13 20:48:10,444 - werkzeug - WARNING -  * Debugger is active!
+2025-10-13 20:48:10,448 - werkzeug - INFO -  * Debugger PIN: 796-100-735
+2025-10-13 21:18:01,532 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 21:18:01] "[31m[1mPOST /api/template_files HTTP/1.1[0m" 400 -
+2025-10-13 21:27:38,734 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 21:27:38] "POST /api/template_files HTTP/1.1" 200 -
+2025-10-13 21:33:08,526 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 21:33:08] "POST /api/template_files HTTP/1.1" 200 -
+2025-10-13 22:11:29,641 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 22:11:29] "[31m[1mPOST /api/jobs/send_template_emails HTTP/1.1[0m" 401 -
+2025-10-13 22:14:47,399 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 22:14:47] "[31m[1mPOST /api/jobs/send_template_emails HTTP/1.1[0m" 400 -
+2025-10-13 22:29:30,305 - werkzeug - INFO - 127.0.0.1 - - [13/Oct/2025 22:29:30] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-13 22:29:30,748 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-13 22:29:32,062 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-13 22:29:32,064 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-13 22:29:32,092 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-13 22:29:32,139 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com

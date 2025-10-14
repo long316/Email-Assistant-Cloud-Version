@@ -61,6 +61,32 @@ class EmailSender:
             邮件消息对象，失败时返回None
         """
         try:
+            # 防止误用未定义的 attachments/images 变量导致的逻辑分支
+            attachments = True
+            images = True
+            # Early path: no attachments and no images -> send simple message directly (avoid recursion)
+            if (not attachments) and (not images):
+                msg = self.create_email_message(to_email, subject, content, html_content)
+                if not msg:
+                    return {"success": False, "error": "创建邮件消息失败", "to_email": to_email}
+                encoded = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+                create_message = {"raw": encoded}
+                result = (
+                    self.gmail_service.users()
+                    .messages()
+                    .send(userId="me", body=create_message)
+                    .execute()
+                )
+                message_id = result.get("id", "")
+                self.logger.info(f"邮件发送成功: {to_email}, Message ID: {message_id}")
+                return {
+                    "success": True,
+                    "message_id": message_id,
+                    "to_email": to_email,
+                    "subject": subject,
+                    "attachment_count": 0,
+                    "image_count": 0,
+                }
             message = EmailMessage()
 
             # 设置邮件基本信息
@@ -104,6 +130,30 @@ class EmailSender:
             发送结果字典，包含success, message_id, error等字段
         """
         # 使用统一的附件发送方法
+        if not attachments:
+            try:
+                message = self.create_email_message(to_email, subject, content, html_content)
+                if not message:
+                    return {"success": False, "error": "创建邮件消息失败", "to_email": to_email}
+                encoded_message = base64.urlsafe_b64encode(message.as_bytes()).decode()
+                create_message = {"raw": encoded_message}
+                result = (
+                    self.gmail_service.users()
+                    .messages()
+                    .send(userId="me", body=create_message)
+                    .execute()
+                )
+                message_id = result.get("id", "")
+                self.logger.info(f"邮件发送成功: {to_email}, Message ID: {message_id}")
+                return {"success": True, "message_id": message_id, "to_email": to_email, "subject": subject}
+            except HttpError as e:
+                error_msg = f"Gmail API错误: {e}"
+                self.logger.error(f"发送邮件失败: {to_email}, {error_msg}")
+                return {"success": False, "error": error_msg, "to_email": to_email}
+            except Exception as e:
+                error_msg = f"发送邮件时发生未知错误: {e}"
+                self.logger.error(f"发送邮件失败: {to_email}, {error_msg}")
+                return {"success": False, "error": error_msg, "to_email": to_email}
         return self.send_email_with_attachments(
             to_email, subject, content, html_content, None, attachments
         )

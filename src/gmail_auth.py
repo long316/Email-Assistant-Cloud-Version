@@ -10,12 +10,17 @@ from typing import Optional
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google_auth_oauthlib.flow import InstalledAppFlow, Flow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# Gmail API所需权限
-SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
+# Gmail API所需权限：
+# - gmail.send 用于发送邮件
+# - gmail.readonly 用于读取基础资料（users.getProfile 等）
+SCOPES = [
+    "https://www.googleapis.com/auth/gmail.send",
+    "https://www.googleapis.com/auth/gmail.readonly",
+]
 
 class GmailAuthManager:
     """Gmail认证管理器"""
@@ -117,6 +122,39 @@ class GmailAuthManager:
                     self.logger.error(f"保存认证凭据失败: {e}")
 
         return creds
+
+    # ===== Web OAuth Support =====
+    def build_authorize_url(self, redirect_uri: str, state: str = ""):
+        """构建 Web 授权 URL（服务端授权）。"""
+        flow = Flow.from_client_secrets_file(
+            self.credentials_file,
+            scopes=SCOPES,
+            redirect_uri=redirect_uri,
+        )
+        auth_url, new_state = flow.authorization_url(
+            access_type="offline",
+            include_granted_scopes="true",
+            prompt="consent",
+            state=state or None,
+        )
+        return auth_url, (state or new_state)
+
+    def exchange_code_for_token(self, code: str, redirect_uri: str):
+        """用授权码换取令牌，并返回邮箱与凭据 JSON。"""
+        flow = Flow.from_client_secrets_file(
+            self.credentials_file,
+            scopes=SCOPES,
+            redirect_uri=redirect_uri,
+        )
+        flow.fetch_token(code=code)
+        creds = flow.credentials
+
+        # 获取邮箱地址用于绑定
+        service = build("gmail", "v1", credentials=creds)
+        profile = service.users().getProfile(userId="me").execute()
+        email_address = profile.get("emailAddress", "")
+
+        return email_address, creds.to_json()
 
     def get_gmail_service(self, email: str):
         """

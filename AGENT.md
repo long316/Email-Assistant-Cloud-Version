@@ -2,7 +2,7 @@
 
 ## Communication
 
-- 永远使用简体中文进行思考和对话
+- 永远使用简体中文进行对话
 
 ## Documentation
 

@@ -3,6 +3,17 @@
 负责按照时间间隔和计划发送邮件，包含智能重试和状态管理
 """
 import time
+import os
+import base64
+import json
+from email.message import EmailMessage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from bs4 import BeautifulSoup
+from email.mime.application import MIMEApplication
+from email.mime.base import MIMEBase
+from email import encoders
 import random
 import logging
 import threading
@@ -14,6 +25,15 @@ from src.gmail_auth import GmailAuthManager
 from src.email_sender import EmailSender
 from src.excel_processor import ExcelProcessor
 import pandas as pd
+from src.dao_mysql import (
+    get_job,
+    list_job_recipients,
+    set_job_status,
+    set_recipient_status,
+    update_job_counts,
+    insert_job_event,
+    get_job_status,
+)
 
 class SchedulerStatus(Enum):
     """调度器状态枚举"""
@@ -71,6 +91,8 @@ class EmailScheduler:
         # 停止标志
         self._stop_flag = threading.Event()
         self._pause_flag = threading.Event()
+        # cache for file-based templates: key=(mu,store,lang)
+        self._template_cache: Dict[str, Dict[str, str]] = {}
 
     def _reset_status(self):
         """重置调度器状态和统计信息"""
@@ -144,7 +166,8 @@ class EmailScheduler:
         subject: str,
         content: str,
         html_content: Optional[str] = None,
-        start_time: Optional[datetime] = None
+        start_time: Optional[datetime] = None,
+        attachments: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """
         发送计划邮件
@@ -219,7 +242,13 @@ class EmailScheduler:
                 self.logger.info(f"正在发送邮件 {i + 1}/{total_count}: {email}")
 
                 # 发送邮件
-                result = email_sender.send_email(email, subject, content, html_content)
+                result = email_sender.send_email(
+                    email,
+                    subject,
+                    content,
+                    html_content,
+                    attachments=norm_attachments,
+                )
 
                 # 更新Excel状态
                 status = 1 if result["success"] else -1
@@ -507,3 +536,387 @@ class EmailScheduler:
             self.logger.error(error_msg)
             self.status = SchedulerStatus.ERROR
             return {"success": False, "error": error_msg}
+
+    def _render_from_template_row(self, template_row: dict, variables: dict) -> Dict[str, str]:
+        def repl(s: str) -> str:
+            if not s:
+                return s
+            out = s
+            for k, v in (variables or {}).items():
+                out = out.replace(f"[{k}]", str(v))
+            return out
+        subject = repl(template_row.get("subject"))
+        html = repl(template_row.get("html_content"))
+        text = repl(template_row.get("text_content")) or repl(template_row.get("subject") or "")
+        return {"subject": subject, "html": html, "text": text}
+
+    def _get_file_template(self, master_user_id: int, store_id: int, language: str) -> Optional[Dict[str, str]]:
+        key = f"{master_user_id}:{store_id}:{language}"
+        if key in self._template_cache:
+            return self._template_cache[key]
+        # load files; fallback en
+        from src.template_files import TemplateFileManager
+        tfm = TemplateFileManager()
+        langs_to_try = [language]
+        if language != "en":
+            langs_to_try.append("en")
+        for lang in langs_to_try:
+            data = tfm.read_language(master_user_id, store_id, lang)
+            if data.get("subject") and data.get("content"):
+                tpl = {"subject": data["subject"], "html": data["content"], "text": data["content"]}
+                self._template_cache[key] = tpl
+                return tpl
+        return None
+
+    def send_job_emails_from_db(
+        self,
+        sender_email: str,
+        master_user_id: int,
+        store_id: int,
+        job_id: str,
+        job_type: str,
+        template_id: Optional[int] = None,
+        subject: Optional[str] = None,
+        content: Optional[str] = None,
+        html_content: Optional[str] = None,
+        attachments: Optional[List[str]] = None,
+        min_interval: Optional[int] = None,
+        max_interval: Optional[int] = None,
+    ) -> Dict[str, Any]:
+        try:
+            if min_interval is not None:
+                self.min_interval = min_interval
+            if max_interval is not None:
+                self.max_interval = max_interval
+
+            # Mark job running
+            set_job_status(job_id, "running")
+            try:
+                insert_job_event(job_id, "started", {"total": len(list_job_recipients(job_id))})
+            except Exception:
+                pass
+
+            # Gmail service
+            gmail_service = self.gmail_auth_manager.get_gmail_service(sender_email)
+            if not gmail_service:
+                set_job_status(job_id, "error")
+                return {"success": False, "error": "Gmail service init failed"}
+            email_sender = EmailSender(gmail_service, sender_email)
+
+            # Load template if needed (only when template_id is provided)
+            template_row = None
+            if job_type == "template" and template_id is not None:
+                from src.dao_mysql import get_template
+                try:
+                    template_row = get_template(master_user_id, store_id, int(template_id))
+                except Exception:
+                    template_row = None
+                if template_row is None:
+                    # If explicit template_id provided but not found -> error
+                    set_job_status(job_id, "error")
+                    return {"success": False, "error": "Template not found for given template_id"}
+
+            recipients = list_job_recipients(job_id, status="pending")
+            total = len(recipients)
+            self._reset_status()
+            self.stats["total_emails"] = total
+            self.status = SchedulerStatus.RUNNING
+            self.start_time = datetime.now()
+
+            for i, row in enumerate(recipients):
+                if self._stop_flag.is_set():
+                    self.status = SchedulerStatus.STOPPED
+                    break
+                while self._pause_flag.is_set() and not self._stop_flag.is_set():
+                    time.sleep(0.1)
+                # DB-level pause/stop
+                try:
+                    cur_status = get_job_status(job_id)
+                    while cur_status == "paused" and not self._stop_flag.is_set():
+                        time.sleep(0.5)
+                        cur_status = get_job_status(job_id)
+                    if cur_status == "stopped":
+                        self.status = SchedulerStatus.STOPPED
+                        break
+                except Exception:
+                    pass
+
+                to_email = row["to_email"]
+                variables = row.get("variables") or {}
+                if isinstance(variables, str):
+                    try:
+                        variables = json.loads(variables)
+                    except Exception:
+                        variables = {}
+                language = row.get("language") or variables.get("语言") or "English"
+
+                # derive effective attachments: prefer function arg, else from variables['__attachments__']
+                eff_attachments = attachments if attachments else variables.get("__attachments__")
+                if isinstance(eff_attachments, str):
+                    try:
+                        eff_attachments = json.loads(eff_attachments)
+                    except Exception:
+                        eff_attachments = [eff_attachments]
+                if eff_attachments is None:
+                    eff_attachments = []
+                # normalize attachment paths: if not under tenant folder, try prefixing
+                norm_attachments = []
+                tenant_attach_dir = os.path.join("tenant_{}_{}".format(master_user_id, store_id), "attachments")
+                for fid in eff_attachments:
+                    if isinstance(fid, str) and "/" not in fid and "\\" not in fid:
+                        cand = os.path.join(tenant_attach_dir, fid)
+                        if os.path.exists(os.path.join("files", cand)):
+                            norm_attachments.append(cand)
+                        else:
+                            norm_attachments.append(fid)
+                    else:
+                        norm_attachments.append(fid)
+
+                try:
+                    if job_type == "template":
+                        if template_row is not None:
+                            rendered = self._render_from_template_row(template_row, variables)
+                        else:
+                            base_tpl = self._get_file_template(master_user_id, store_id, language)
+                            if not base_tpl:
+                                raise RuntimeError(f"Template files not found for language={language} (fallback en tried)")
+                            # apply variables
+                            rendered = self._render_from_template_row(
+                                {"subject": base_tpl["subject"], "html_content": base_tpl["html"], "text_content": base_tpl["text"]},
+                                variables,
+                            )
+
+                        if norm_attachments:
+                            # Try to inline images even when attachments exist
+                            html = rendered.get("html") or ""
+                            text = rendered.get("text") or ""
+                            images_to_embed = []
+                            if html:
+                                try:
+                                    soup = BeautifulSoup(html, "html.parser")
+                                    for img in soup.find_all("img"):
+                                        img_id = img.get("id")
+                                        if not img_id:
+                                            continue
+                                        from src.dao_mysql import get_asset_by_file_id
+                                        row_img = get_asset_by_file_id(master_user_id, store_id, "image", img_id)
+                                        if row_img and row_img.get("storage_path"):
+                                            cid = f"image_{img_id}"
+                                            images_to_embed.append({"cid": cid, "path": row_img["storage_path"], "filename": row_img.get("filename", img_id)})
+                                            img.attrs.pop("id", None)
+                                            img["src"] = f"cid:{cid}"
+                                    html = str(soup)
+                                except Exception:
+                                    pass
+
+                            if images_to_embed:
+                                root = MIMEMultipart('mixed')
+                                root["To"] = to_email
+                                root["From"] = sender_email
+                                root["Subject"] = rendered["subject"]
+
+                                related = MIMEMultipart('related')
+                                alt = MIMEMultipart('alternative')
+                                alt.attach(MIMEText(text, 'plain', 'utf-8'))
+                                alt.attach(MIMEText(html, 'html', 'utf-8'))
+                                related.attach(alt)
+
+                                # inline images
+                                for info in images_to_embed:
+                                    try:
+                                        with open(info["path"], 'rb') as f:
+                                            img_bytes = f.read()
+                                        mime_img = MIMEImage(img_bytes)
+                                        mime_img.add_header('Content-ID', f'<{info["cid"]}>')
+                                        mime_img.add_header('Content-Disposition', 'inline', filename=info["filename"]) 
+                                        related.attach(mime_img)
+                                    except Exception:
+                                        continue
+
+                                root.attach(related)
+
+                                # file attachments
+                                try:
+                                    att_mgr = email_sender.attachment_manager
+                                    for fid in norm_attachments:
+                                        ad = att_mgr.load_attachment_data(fid)
+                                        if not ad.get("success"):
+                                            continue
+                                        file_bytes = base64.urlsafe_b64decode(ad["base64_data"]) if '-' in ad["base64_data"] or '_' in ad["base64_data"] else base64.b64decode(ad["base64_data"]) 
+                                        mime_type = ad["mime_type"] or 'application/octet-stream'
+                                        filename = ad["filename"] or 'file'
+                                        if mime_type.startswith('application/') or mime_type.startswith('text/'):
+                                            part = MIMEApplication(file_bytes, _subtype=mime_type.split('/')[-1])
+                                        else:
+                                            main, sub = (mime_type.split('/', 1) + ['octet-stream'])[:2]
+                                            part = MIMEBase(main, sub)
+                                            part.set_payload(file_bytes)
+                                            encoders.encode_base64(part)
+                                        part.add_header('Content-Disposition', 'attachment', filename=filename)
+                                        root.attach(part)
+                                except Exception:
+                                    pass
+
+                                encoded = base64.urlsafe_b64encode(root.as_bytes()).decode()
+                                create_message = {"raw": encoded}
+                                result = (
+                                    email_sender.gmail_service.users()
+                                    .messages()
+                                    .send(userId="me", body=create_message)
+                                    .execute()
+                                )
+                                send_res = {"success": True, "message_id": result.get("id", "")}
+                            else:
+                                # no inline images, use existing attachment path
+                                send_res = email_sender.send_email_with_attachments(
+                                    to_email=to_email,
+                                    subject=rendered["subject"],
+                                    content=rendered["text"],
+                                    html_content=rendered["html"],
+                                    images=None,
+                                    attachments=norm_attachments,
+                                )
+                        else:
+                            # Direct send with optional inline images
+                            html = rendered.get("html") or ""
+                            text = rendered.get("text") or ""
+                            # Parse <img id="...">
+                            images_to_embed = []
+                            if html:
+                                try:
+                                    soup = BeautifulSoup(html, "html.parser")
+                                    for img in soup.find_all("img"):
+                                        img_id = img.get("id")
+                                        if not img_id:
+                                            continue
+                                        # lookup asset image by file_id=img_id
+                                        from src.dao_mysql import get_asset_by_file_id
+                                        row_img = get_asset_by_file_id(master_user_id, store_id, "image", img_id)
+                                        if row_img and row_img.get("storage_path"):
+                                            cid = f"image_{img_id}"
+                                            images_to_embed.append({"cid": cid, "path": row_img["storage_path"], "filename": row_img["filename"]})
+                                            img.attrs.pop("id", None)
+                                            img["src"] = f"cid:{cid}"
+                                    html = str(soup)
+                                except Exception:
+                                    pass
+
+                            if images_to_embed:
+                                msg = MIMEMultipart('related')
+                                msg["To"] = to_email
+                                msg["From"] = sender_email
+                                msg["Subject"] = rendered["subject"]
+                                alt = MIMEMultipart('alternative')
+                                alt.attach(MIMEText(text, 'plain', 'utf-8'))
+                                alt.attach(MIMEText(html, 'html', 'utf-8'))
+                                msg.attach(alt)
+                                for info in images_to_embed:
+                                    try:
+                                        with open(info["path"], 'rb') as f:
+                                            img_bytes = f.read()
+                                        mime_img = MIMEImage(img_bytes)
+                                        mime_img.add_header('Content-ID', f'<{info["cid"]}>')
+                                        mime_img.add_header('Content-Disposition', 'inline', filename=info.get("filename", info["cid"]))
+                                        msg.attach(mime_img)
+                                    except Exception:
+                                        continue
+                            else:
+                                msg = EmailMessage()
+                                msg["To"] = to_email
+                                msg["From"] = sender_email
+                                msg["Subject"] = rendered["subject"]
+                                if html:
+                                    msg.set_content(text)
+                                    msg.add_alternative(html, subtype='html')
+                                else:
+                                    msg.set_content(text)
+                            encoded = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+                            create_message = {"raw": encoded}
+                            result = (
+                                email_sender.gmail_service.users()
+                                .messages()
+                                .send(userId="me", body=create_message)
+                                .execute()
+                            )
+                            send_res = {"success": True, "message_id": result.get("id", "")}
+                    else:
+                        if norm_attachments:
+                            send_res = email_sender.send_email_with_attachments(
+                                to_email=to_email,
+                                subject=subject,
+                                content=content,
+                                html_content=html_content,
+                                images=None,
+                                attachments=norm_attachments,
+                            )
+                        else:
+                            msg = EmailMessage()
+                            msg["To"] = to_email
+                            msg["From"] = sender_email
+                            msg["Subject"] = subject
+                            if html_content:
+                                msg.set_content(content)
+                                msg.add_alternative(html_content, subtype="html")
+                            else:
+                                msg.set_content(content)
+                            encoded = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+                            create_message = {"raw": encoded}
+                            result = (
+                                email_sender.gmail_service.users()
+                                .messages()
+                                .send(userId="me", body=create_message)
+                                .execute()
+                            )
+                            send_res = {"success": True, "message_id": result.get("id", "")}
+
+                    if send_res.get("success"):
+                        update_job_counts(job_id, success_inc=1)
+                        set_recipient_status(row["id"], "success", None, send_res.get("message_id"))
+                        self.stats["success_count"] += 1
+                        try:
+                            insert_job_event(job_id, "recipient_success", {"email": to_email})
+                        except Exception:
+                            pass
+                    else:
+                        update_job_counts(job_id, failure_inc=1)
+                        set_recipient_status(row["id"], "failed", send_res.get("error"))
+                        self.stats["failure_count"] += 1
+                        try:
+                            insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": send_res.get("error")})
+                        except Exception:
+                            pass
+                except Exception as e:
+                    update_job_counts(job_id, failure_inc=1)
+                    set_recipient_status(row["id"], "failed", str(e))
+                    self.stats["failure_count"] += 1
+                    try:
+                        insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": str(e)})
+                    except Exception:
+                        pass
+
+                if i < total - 1:
+                    interval = self.calculate_wait_time()
+                    if self._wait_with_interruption(interval):
+                        self.status = SchedulerStatus.STOPPED
+                        break
+
+            if self.status != SchedulerStatus.STOPPED:
+                self.status = SchedulerStatus.IDLE
+                set_job_status(job_id, "completed")
+                try:
+                    insert_job_event(job_id, "completed", {"success": self.stats["success_count"], "failed": self.stats["failure_count"]})
+                except Exception:
+                    pass
+
+            end_time = datetime.now()
+            duration = end_time - self.start_time
+            return {"success": True, "stats": self.stats.copy(), "duration": str(duration), "status": self.status.value}
+
+        except Exception as e:
+            try:
+                self.logger.error(f"Job {job_id} failed: {e}")
+                set_job_status(job_id, "error")
+                insert_job_event(job_id, "failed", {"error": str(e)})
+            except Exception:
+                pass
+            return {"success": False, "error": str(e)}
