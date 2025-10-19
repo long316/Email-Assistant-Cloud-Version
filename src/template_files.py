@@ -19,10 +19,10 @@ class TemplateFileManager:
         self.files_root = files_root
 
     # ----- paths -----
-    def _tenant_dir(self, master_user_id: int, store_id: int) -> str:
+    def _tenant_dir(self, master_user_id: str, store_id: str) -> str:
         return os.path.join(self.files_root, f"tenant_{master_user_id}_{store_id}", "templates")
 
-    def _paths(self, master_user_id: int, store_id: int, language: str) -> Tuple[str, str]:
+    def _paths(self, master_user_id: str, store_id: str, language: str) -> Tuple[str, str]:
         tdir = self._tenant_dir(master_user_id, store_id)
         os.makedirs(tdir, exist_ok=True)
         return (
@@ -53,13 +53,13 @@ class TemplateFileManager:
         return str(soup)
 
     # ----- CRUD -----
-    def save_subject(self, master_user_id: int, store_id: int, language: str, text: str) -> None:
+    def save_subject(self, master_user_id: str, store_id: str, language: str, text: str) -> None:
         self._validate_language(language)
         subject_path, _ = self._paths(master_user_id, store_id, language)
         with open(subject_path, "w", encoding="utf-8") as f:
             f.write(text or "")
 
-    def save_content(self, master_user_id: int, store_id: int, language: str, html_text: str) -> None:
+    def save_content(self, master_user_id: str, store_id: str, language: str, html_text: str) -> None:
         self._validate_language(language)
         _, content_path = self._paths(master_user_id, store_id, language)
         clean = self._sanitize_html(html_text or "")
@@ -69,7 +69,7 @@ class TemplateFileManager:
         with open(content_path, "w", encoding="utf-8") as f:
             f.write(clean)
 
-    def read_language(self, master_user_id: int, store_id: int, language: str) -> Dict[str, Optional[str]]:
+    def read_language(self, master_user_id: str, store_id: str, language: str) -> Dict[str, Optional[str]]:
         self._validate_language(language)
         subject_path, content_path = self._paths(master_user_id, store_id, language)
         subject = None
@@ -80,7 +80,7 @@ class TemplateFileManager:
             content = open(content_path, "r", encoding="utf-8").read()
         return {"language": language, "subject": subject, "content": content}
 
-    def delete_language(self, master_user_id: int, store_id: int, language: str, kind: Optional[str] = None) -> int:
+    def delete_language(self, master_user_id: str, store_id: str, language: str, kind: Optional[str] = None) -> int:
         self._validate_language(language)
         subject_path, content_path = self._paths(master_user_id, store_id, language)
         removed = 0
@@ -95,7 +95,7 @@ class TemplateFileManager:
             _rm(content_path)
         return removed
 
-    def list_languages(self, master_user_id: int, store_id: int) -> List[Dict[str, any]]:
+    def list_languages(self, master_user_id: str, store_id: str) -> List[Dict[str, any]]:
         tdir = self._tenant_dir(master_user_id, store_id)
         if not os.path.exists(tdir):
             return []
@@ -110,4 +110,3 @@ class TemplateFileManager:
                 seen.setdefault(lang, {"language": lang, "has_subject": False, "has_content": False})
                 seen[lang]["has_content"] = True
         return sorted(seen.values(), key=lambda x: x["language"]) 
-

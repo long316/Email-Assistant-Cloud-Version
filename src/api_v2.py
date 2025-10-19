@@ -68,8 +68,8 @@ def jobs_send_template():
     for k in required:
         if k not in data:
             return jsonify({"success": False, "error": f"missing {k}"}), 400
-    mu = int(data["master_user_id"])
-    store = int(data["store_id"])
+    mu = str(data["master_user_id"])
+    store = str(data["store_id"])
     sender = data["sender_email"]
     template_id = data.get("template_id")
     if template_id is not None:
@@ -152,8 +152,8 @@ def jobs_send_custom():
     for k in required:
         if k not in data:
             return jsonify({"success": False, "error": f"missing {k}"}), 400
-    mu = int(data["master_user_id"])
-    store = int(data["store_id"])
+    mu = str(data["master_user_id"])
+    store = str(data["store_id"])
     sender = data["sender_email"]
     subject = data["subject"]
     content = data["content"]
@@ -289,8 +289,8 @@ def templates_create():
 @bp.route("/templates", methods=["GET"])
 def templates_list():
     try:
-        master_user_id = int(request.args.get("master_user_id", "0"))
-        store_id = int(request.args.get("store_id", "0"))
+        master_user_id = request.args.get("master_user_id", "")
+        store_id = request.args.get("store_id", "")
         if not master_user_id or not store_id:
             return jsonify({"success": False, "error": "missing master_user_id/store_id"}), 400
         limit = int(request.args.get("limit", "50"))
@@ -304,8 +304,8 @@ def templates_list():
 @bp.route("/templates/<int:tpl_id>", methods=["GET"])
 def templates_get(tpl_id: int):
     try:
-        master_user_id = int(request.args.get("master_user_id", "0"))
-        store_id = int(request.args.get("store_id", "0"))
+        master_user_id = request.args.get("master_user_id", "")
+        store_id = request.args.get("store_id", "")
         row = get_template(master_user_id, store_id, tpl_id)
         if not row:
             return jsonify({"success": False, "error": "not found"}), 404
@@ -321,8 +321,8 @@ def templates_update(tpl_id: int):
         return resp
     data = request.get_json() or {}
     try:
-        master_user_id = int(data.get("master_user_id", 0))
-        store_id = int(data.get("store_id", 0))
+        master_user_id = str(data.get("master_user_id", "") or "")
+        store_id = str(data.get("store_id", "") or "")
         if not master_user_id or not store_id:
             return jsonify({"success": False, "error": "missing master_user_id/store_id"}), 400
         cnt = update_template(master_user_id, store_id, tpl_id, data)
@@ -339,8 +339,8 @@ def templates_delete(tpl_id: int):
     if not ok:
         return resp
     try:
-        master_user_id = int(request.args.get("master_user_id", "0"))
-        store_id = int(request.args.get("store_id", "0"))
+        master_user_id = request.args.get("master_user_id", "")
+        store_id = request.args.get("store_id", "")
         cnt = delete_template(master_user_id, store_id, tpl_id)
         if cnt == 0:
             return jsonify({"success": False, "error": "not found"}), 404
@@ -355,8 +355,8 @@ def assets_upload():
     if not ok:
         return resp
     try:
-        master_user_id = int(request.form.get("master_user_id", 0))
-        store_id = int(request.form.get("store_id", 0))
+        master_user_id = request.form.get("master_user_id", "")
+        store_id = request.form.get("store_id", "")
         asset_type = request.form.get("asset_type")
         file_id = request.form.get("file_id")
         if asset_type not in ("image", "attachment"):
@@ -398,8 +398,8 @@ def template_files_upload():
     if not ok:
         return resp
     try:
-        mu = int(request.form.get("master_user_id", 0))
-        store = int(request.form.get("store_id", 0))
+        mu = request.form.get("master_user_id", "")
+        store = request.form.get("store_id", "")
         language = (request.form.get("language") or "").strip()
         kind = (request.form.get("kind") or "").strip()  # subject|content
         f = request.files.get("file")
@@ -420,8 +420,8 @@ def template_files_upload():
 @bp.route("/template_files", methods=["GET"])
 def template_files_list():
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         tfm = TemplateFileManager()
         items = tfm.list_languages(mu, store)
         return jsonify({"success": True, "items": items})
@@ -432,8 +432,8 @@ def template_files_list():
 @bp.route("/template_files/<string:language>", methods=["GET"])
 def template_files_get(language: str):
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         tfm = TemplateFileManager()
         data = tfm.read_language(mu, store, language)
         return jsonify({"success": True, "template": data})
@@ -447,8 +447,8 @@ def template_files_delete(language: str):
     if not ok:
         return resp
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         kind = request.args.get("kind")  # subject|content|None
         tfm = TemplateFileManager()
         removed = tfm.delete_language(mu, store, language, kind)
@@ -461,8 +461,8 @@ def template_files_delete(language: str):
 @bp.route("/assets", methods=["GET"])
 def assets_list():
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         asset_type = request.args.get("asset_type")  # image|attachment|None
         limit = int(request.args.get("limit", 50))
         offset = int(request.args.get("offset", 0))
@@ -475,8 +475,8 @@ def assets_list():
 @bp.route("/assets/<int:asset_id>", methods=["GET"])
 def assets_get(asset_id: int):
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         row = get_asset_by_id(asset_id, mu, store)
         if not row:
             return jsonify({"success": False, "error": "not found"}), 404
@@ -491,8 +491,8 @@ def assets_delete(asset_id: int):
     if not ok:
         return resp
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         deleted = delete_asset(asset_id, mu, store)
         if deleted == 0:
             return jsonify({"success": False, "error": "not found"}), 404
@@ -505,8 +505,8 @@ def assets_delete(asset_id: int):
 @bp.route("/senders", methods=["GET"])
 def senders_list():
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         items = list_senders(mu, store)
         return jsonify({"success": True, "items": items})
     except Exception as e:
@@ -519,8 +519,8 @@ def senders_delete(sender_id: int):
     if not ok:
         return resp
     try:
-        mu = int(request.args.get("master_user_id", 0))
-        store = int(request.args.get("store_id", 0))
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
         deleted = delete_sender(sender_id, mu, store)
         if deleted == 0:
             return jsonify({"success": False, "error": "not found"}), 404

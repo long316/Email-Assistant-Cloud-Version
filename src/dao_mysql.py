@@ -32,7 +32,7 @@ def _conn():
 
 
 # Sender accounts
-def upsert_sender_account(master_user_id: int, store_id: int, email: str, token_json: Dict[str, Any]) -> None:
+def upsert_sender_account(master_user_id: str, store_id: str, email: str, token_json: Dict[str, Any]) -> None:
     sql = (
         "INSERT INTO sender_accounts (master_user_id, store_id, email, provider, token_json)"
         " VALUES (%s,%s,%s,'gmail',%s)"
@@ -66,7 +66,7 @@ def create_template(data: Dict[str, Any]) -> int:
             return cur.lastrowid
 
 
-def get_template(master_user_id: int, store_id: int, template_id: int) -> Optional[Dict[str, Any]]:
+def get_template(master_user_id: str, store_id: str, template_id: int) -> Optional[Dict[str, Any]]:
     sql = "SELECT * FROM templates WHERE id=%s AND master_user_id=%s AND store_id=%s"
     with _conn() as conn:
         with conn.cursor() as cur:
@@ -74,7 +74,7 @@ def get_template(master_user_id: int, store_id: int, template_id: int) -> Option
             return cur.fetchone()
 
 
-def list_templates(master_user_id: int, store_id: int, limit: int = 50, offset: int = 0) -> List[Dict[str, Any]]:
+def list_templates(master_user_id: str, store_id: str, limit: int = 50, offset: int = 0) -> List[Dict[str, Any]]:
     sql = "SELECT * FROM templates WHERE master_user_id=%s AND store_id=%s ORDER BY id DESC LIMIT %s OFFSET %s"
     with _conn() as conn:
         with conn.cursor() as cur:
@@ -82,7 +82,7 @@ def list_templates(master_user_id: int, store_id: int, limit: int = 50, offset: 
             return cur.fetchall()
 
 
-def update_template(master_user_id: int, store_id: int, template_id: int, updates: Dict[str, Any]) -> int:
+def update_template(master_user_id: str, store_id: str, template_id: int, updates: Dict[str, Any]) -> int:
     fields = []
     args: List[Any] = []
     for key in ("name", "language", "subject", "html_content", "text_content", "version", "is_active"):
@@ -102,7 +102,7 @@ def update_template(master_user_id: int, store_id: int, template_id: int, update
             return cur.rowcount
 
 
-def delete_template(master_user_id: int, store_id: int, template_id: int) -> int:
+def delete_template(master_user_id: str, store_id: str, template_id: int) -> int:
     sql = "DELETE FROM templates WHERE id=%s AND master_user_id=%s AND store_id=%s"
     with _conn() as conn:
         with conn.cursor() as cur:
@@ -111,7 +111,7 @@ def delete_template(master_user_id: int, store_id: int, template_id: int) -> int
 
 
 # Assets helpers
-def resolve_attachment_paths(master_user_id: int, store_id: int, file_ids: List[str]) -> List[str]:
+def resolve_attachment_paths(master_user_id: str, store_id: str, file_ids: List[str]) -> List[str]:
     """Map assets.file_id to relative paths under files/ for AttachmentManager.
     Returns list of relative file_ids like 'tenant_{mu}_{store}/attachments/filename.ext'.
     Falls back to original id if not found in DB.
@@ -136,8 +136,8 @@ def resolve_attachment_paths(master_user_id: int, store_id: int, file_ids: List[
 
 # Jobs and recipients
 def create_job(
-    master_user_id: int,
-    store_id: int,
+    master_user_id: str,
+    store_id: str,
     job_type: str,
     sender_email: str,
     template_id: Optional[int],
@@ -269,7 +269,7 @@ def get_job_status(job_id: str) -> Optional[str]:
 
 
 # ===== Assets =====
-def list_assets(master_user_id: int, store_id: int, asset_type: Optional[str] = None, limit: int = 50, offset: int = 0) -> List[Dict[str, Any]]:
+def list_assets(master_user_id: str, store_id: str, asset_type: Optional[str] = None, limit: int = 50, offset: int = 0) -> List[Dict[str, Any]]:
     if asset_type:
         sql = (
             "SELECT * FROM assets WHERE master_user_id=%s AND store_id=%s AND asset_type=%s"
@@ -288,7 +288,7 @@ def list_assets(master_user_id: int, store_id: int, asset_type: Optional[str] = 
             return cur.fetchall()
 
 
-def get_asset_by_id(asset_id: int, master_user_id: int, store_id: int) -> Optional[Dict[str, Any]]:
+def get_asset_by_id(asset_id: int, master_user_id: str, store_id: str) -> Optional[Dict[str, Any]]:
     sql = "SELECT * FROM assets WHERE id=%s AND master_user_id=%s AND store_id=%s"
     with _conn() as conn:
         with conn.cursor() as cur:
@@ -296,7 +296,7 @@ def get_asset_by_id(asset_id: int, master_user_id: int, store_id: int) -> Option
             return cur.fetchone()
 
 
-def delete_asset(asset_id: int, master_user_id: int, store_id: int) -> int:
+def delete_asset(asset_id: int, master_user_id: str, store_id: str) -> int:
     sql = "DELETE FROM assets WHERE id=%s AND master_user_id=%s AND store_id=%s"
     with _conn() as conn:
         with conn.cursor() as cur:
@@ -304,7 +304,7 @@ def delete_asset(asset_id: int, master_user_id: int, store_id: int) -> int:
             return cur.rowcount
 
 
-def get_asset_by_file_id(master_user_id: int, store_id: int, asset_type: str, file_id: str) -> Optional[Dict[str, Any]]:
+def get_asset_by_file_id(master_user_id: str, store_id: str, asset_type: str, file_id: str) -> Optional[Dict[str, Any]]:
     sql = (
         "SELECT * FROM assets WHERE master_user_id=%s AND store_id=%s AND asset_type=%s AND file_id=%s"
         " ORDER BY id DESC LIMIT 1"
@@ -316,7 +316,7 @@ def get_asset_by_file_id(master_user_id: int, store_id: int, asset_type: str, fi
 
 
 # ===== Sender accounts =====
-def list_senders(master_user_id: int, store_id: int) -> List[Dict[str, Any]]:
+def list_senders(master_user_id: str, store_id: str) -> List[Dict[str, Any]]:
     sql = (
         "SELECT id, master_user_id, store_id, email, provider, status, created_at, updated_at"
         " FROM sender_accounts WHERE master_user_id=%s AND store_id=%s ORDER BY id DESC"
@@ -327,7 +327,7 @@ def list_senders(master_user_id: int, store_id: int) -> List[Dict[str, Any]]:
             return cur.fetchall()
 
 
-def delete_sender(sender_id: int, master_user_id: int, store_id: int) -> int:
+def delete_sender(sender_id: int, master_user_id: str, store_id: str) -> int:
     sql = "DELETE FROM sender_accounts WHERE id=%s AND master_user_id=%s AND store_id=%s"
     with _conn() as conn:
         with conn.cursor() as cur:

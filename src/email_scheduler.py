@@ -18,6 +18,8 @@ import random
 import logging
 import threading
 from datetime import datetime, timedelta
+from urllib import request as _urlrequest
+from urllib.error import URLError, HTTPError
 from typing import List, Dict, Any, Optional, Callable
 from enum import Enum
 
@@ -550,7 +552,7 @@ class EmailScheduler:
         text = repl(template_row.get("text_content")) or repl(template_row.get("subject") or "")
         return {"subject": subject, "html": html, "text": text}
 
-    def _get_file_template(self, master_user_id: int, store_id: int, language: str) -> Optional[Dict[str, str]]:
+    def _get_file_template(self, master_user_id: str, store_id: str, language: str) -> Optional[Dict[str, str]]:
         key = f"{master_user_id}:{store_id}:{language}"
         if key in self._template_cache:
             return self._template_cache[key]
@@ -571,8 +573,8 @@ class EmailScheduler:
     def send_job_emails_from_db(
         self,
         sender_email: str,
-        master_user_id: int,
-        store_id: int,
+        master_user_id: str,
+        store_id: str,
         job_id: str,
         job_type: str,
         template_id: Optional[int] = None,
@@ -593,6 +595,45 @@ class EmailScheduler:
             set_job_status(job_id, "running")
             try:
                 insert_job_event(job_id, "started", {"total": len(list_job_recipients(job_id))})
+            except Exception:
+                pass
+
+            # Read webhook_url once and define sender
+            try:
+                job_row = get_job(job_id)
+                webhook_url = (job_row or {}).get("webhook_url")
+            except Exception:
+                webhook_url = None
+
+            def _send_webhook(event_type: str, event_data: Dict[str, Any]):
+                if not webhook_url:
+                    return
+                try:
+                    payload = {
+                        "job_id": job_id,
+                        "event_type": event_type,
+                        "event_data": event_data,
+                        "timestamp": datetime.utcnow().isoformat() + "Z",
+                    }
+                    data = json.dumps(payload).encode("utf-8")
+                    req = _urlrequest.Request(
+                        webhook_url,
+                        data=data,
+                        headers={"Content-Type": "application/json"},
+                        method="POST",
+                    )
+                    # Fire-and-forget with short timeout
+                    _urlrequest.urlopen(req, timeout=5)
+                except (HTTPError, URLError, Exception):
+                    # Ignore webhook errors to not affect job execution
+                    try:
+                        self.logger.debug(f"Webhook POST failed for job {job_id} event {event_type}")
+                    except Exception:
+                        pass
+
+            # Notify started
+            try:
+                _send_webhook("started", {"total": len(list_job_recipients(job_id))})
             except Exception:
                 pass
 
@@ -877,6 +918,10 @@ class EmailScheduler:
                             insert_job_event(job_id, "recipient_success", {"email": to_email})
                         except Exception:
                             pass
+                        try:
+                            _send_webhook("recipient_success", {"to_email": to_email})
+                        except Exception:
+                            pass
                     else:
                         update_job_counts(job_id, failure_inc=1)
                         set_recipient_status(row["id"], "failed", send_res.get("error"))
@@ -885,12 +930,20 @@ class EmailScheduler:
                             insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": send_res.get("error")})
                         except Exception:
                             pass
+                        try:
+                            _send_webhook("recipient_failed", {"to_email": to_email, "error": send_res.get("error")})
+                        except Exception:
+                            pass
                 except Exception as e:
                     update_job_counts(job_id, failure_inc=1)
                     set_recipient_status(row["id"], "failed", str(e))
                     self.stats["failure_count"] += 1
                     try:
                         insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": str(e)})
+                    except Exception:
+                        pass
+                    try:
+                        _send_webhook("recipient_failed", {"to_email": to_email, "error": str(e)})
                     except Exception:
                         pass
 
@@ -907,6 +960,17 @@ class EmailScheduler:
                     insert_job_event(job_id, "completed", {"success": self.stats["success_count"], "failed": self.stats["failure_count"]})
                 except Exception:
                     pass
+                try:
+                    _send_webhook(
+                        "completed",
+                        {
+                            "total": self.stats.get("total_emails", 0),
+                            "success": self.stats.get("success_count", 0),
+                            "failed": self.stats.get("failure_count", 0),
+                        },
+                    )
+                except Exception:
+                    pass
 
             end_time = datetime.now()
             duration = end_time - self.start_time
@@ -917,6 +981,31 @@ class EmailScheduler:
                 self.logger.error(f"Job {job_id} failed: {e}")
                 set_job_status(job_id, "error")
                 insert_job_event(job_id, "failed", {"error": str(e)})
+            except Exception:
+                pass
+            try:
+                # Attempt to read webhook_url lazily if not available
+                job_row = None
+                try:
+                    job_row = get_job(job_id)
+                except Exception:
+                    pass
+                webhook_url = (job_row or {}).get("webhook_url")
+                if webhook_url:
+                    payload = {
+                        "job_id": job_id,
+                        "event_type": "failed",
+                        "event_data": {"error": str(e)},
+                        "timestamp": datetime.utcnow().isoformat() + "Z",
+                    }
+                    data = json.dumps(payload).encode("utf-8")
+                    req = _urlrequest.Request(
+                        webhook_url,
+                        data=data,
+                        headers={"Content-Type": "application/json"},
+                        method="POST",
+                    )
+                    _urlrequest.urlopen(req, timeout=5)
             except Exception:
                 pass
             return {"success": False, "error": str(e)}

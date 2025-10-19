@@ -167,3 +167,71 @@
 2025-10-14 15:33:38,866 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
 2025-10-14 15:37:22,487 - werkzeug - INFO -  * Detected change in 'D:\\Email Assistant\\src\\email_scheduler.py', reloading
 2025-10-14 15:37:22,669 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 15:37:31,144 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 15:37:31,148 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 15:38:55,082 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 15:38:55] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 15:38:55,800 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 15:38:55,804 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 15:38:55,826 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:05:50,693 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:05:50] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:05:51,355 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:05:52,644 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-14 16:05:52,645 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 16:05:52,649 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:05:52,651 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:05:53,807 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 16:08:22,848 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:08:22] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:08:23,576 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:08:23,578 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:08:23,581 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:10:47,934 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:10:47] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:10:48,984 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:10:48,987 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:10:48,990 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:10:50,154 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 16:40:09,251 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-14 16:40:09,251 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 16:40:09,253 - werkzeug - INFO -  * Restarting with stat
+2025-10-14 16:40:10,414 - werkzeug - WARNING -  * Debugger is active!
+2025-10-14 16:40:10,420 - werkzeug - INFO -  * Debugger PIN: 108-509-478
+2025-10-14 16:46:21,463 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:46:21] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:46:23,009 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:46:23,013 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:46:23,015 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:52:52,325 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:52:52] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:52:52,808 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:52:52,812 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:52:52,815 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:52:54,030 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 16:53:50,518 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:53:50] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:53:52,749 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:53:52,752 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:53:52,755 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:53:53,912 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 16:56:20,632 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:56:20] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:56:21,977 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:56:21,982 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:56:21,985 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:56:23,174 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 16:57:33,337 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 16:57:33] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 16:57:34,863 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 16:57:34,866 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 16:57:34,869 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 16:57:36,044 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 17:00:15,894 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 17:00:15] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 17:00:16,275 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 17:00:16,281 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 17:00:16,284 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 17:00:17,086 - src.attachment_manager - INFO - 附件加载成功: tenant_1_2/attachments/product_catalog2.pdf (85308 bytes)
+2025-10-14 17:00:20,455 - src.email_sender - INFO - 包含附件的邮件发送成功: johnloneyy@gmail.com, Message ID: 199e1f2f74417a39
+2025-10-14 17:01:49,594 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 17:01:49] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 17:01:51,269 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 17:01:51,272 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 17:01:51,276 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com
+2025-10-14 17:03:16,194 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 17:03:16] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-14 17:03:19,201 - src.gmail_auth - INFO - 加载已存在的认证文件: token_junoliii98_gmail_com.json
+2025-10-14 17:03:20,494 - src.gmail_auth - INFO - 刷新认证token成功: junoliii98@gmail.com
+2025-10-14 17:03:20,495 - src.gmail_auth - INFO - 认证凭据已保存: token_junoliii98_gmail_com.json
+2025-10-14 17:03:20,499 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-14 17:03:20,502 - src.gmail_auth - INFO - Gmail服务初始化成功: junoliii98@gmail.com

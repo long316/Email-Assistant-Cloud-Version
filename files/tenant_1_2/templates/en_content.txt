@@ -12,7 +12,7 @@
 <p>[hook]</p>
 <p>I'm Erica, founder of Swipe Up US (Outdoor Living &amp; Essentials). We've just launched a multifunctional flashlight, recently ranked among the top outdoor gear innovations this year.</p>
 
- <!-- Product Image -->
+<!-- Product Image -->
 <div style="text-align: center; margin: 20px 0;">
         <img id="logo" alt="Logo" style="max-width: 300px; height: auto; border: 1px solid #eee; border-radius: 8px;" />
 </div>

@@ -23,8 +23,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `templates`;
 CREATE TABLE `templates`  (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `master_user_id` bigint NOT NULL,
-  `store_id` bigint NOT NULL,
+  `master_user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `store_id` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `language` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `subject` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,

@@ -23,8 +23,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `jobs`;
 CREATE TABLE `jobs`  (
   `id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `master_user_id` bigint NOT NULL,
-  `store_id` bigint NOT NULL,
+  `master_user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `store_id` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` enum('template','custom') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `sender_email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `template_id` bigint UNSIGNED NULL DEFAULT NULL,

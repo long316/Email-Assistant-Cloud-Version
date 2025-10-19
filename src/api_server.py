@@ -314,8 +314,8 @@ def oauth_google_authorize():
     try:
         import base64, json
         sender_email = request.args.get("sender_email")
-        mu = int(request.args.get("master_user_id", "0") or 0)
-        store = int(request.args.get("store_id", "0") or 0)
+        mu = request.args.get("master_user_id") or ""
+        store = request.args.get("store_id") or ""
         return_url = request.args.get("return_url")
         if not sender_email:
             return jsonify({"success": False, "error": "Missing sender_email"}), 400
@@ -351,8 +351,8 @@ def oauth_google_callback():
             except Exception:
                 payload = {}
 
-        mu = int(payload.get("mu", 0) or 0)
-        store = int(payload.get("store", 0) or 0)
+        mu = payload.get("mu") or ""
+        store = payload.get("store") or ""
         return_url = payload.get("return_url")
 
         redirect_uri = cfg["OAUTH_REDIRECT_URL"]
