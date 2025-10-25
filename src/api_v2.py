@@ -30,6 +30,7 @@ from src.dao_mysql import (
 )
 from src.template_files import TemplateFileManager
 from datetime import datetime, timezone
+import mimetypes
 
 
 bp = Blueprint("api_v2", __name__, url_prefix="/api")
@@ -441,6 +442,28 @@ def template_files_get(language: str):
         return jsonify({"success": False, "error": str(e)}), 400
 
 
+@bp.route("/template_files/all", methods=["GET"])
+def template_files_all():
+    try:
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
+        include_empty = request.args.get("include_empty", "false").strip().lower() in ("1", "true", "yes")
+        tfm = TemplateFileManager()
+        langs = tfm.list_languages(mu, store)
+        items = []
+        for it in langs:
+            lang = it.get("language")
+            if not lang:
+                continue
+            data = tfm.read_language(mu, store, lang)
+            if not include_empty and (data.get("subject") is None and data.get("content") is None):
+                continue
+            items.append(data)
+        return jsonify({"success": True, "items": items})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
 @bp.route("/template_files/<string:language>", methods=["DELETE"])
 def template_files_delete(language: str):
     ok, resp = _require_api_key()
@@ -497,6 +520,44 @@ def assets_delete(asset_id: int):
         if deleted == 0:
             return jsonify({"success": False, "error": "not found"}), 404
         return jsonify({"success": True, "deleted": deleted})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+# ===== Tenant files list (pics/attachments) =====
+@bp.route("/files/<string:kind>", methods=["GET"])
+def files_list(kind: str):
+    try:
+        kind = (kind or "").strip().lower()
+        if kind not in ("pics", "attachments"):
+            return jsonify({"success": False, "error": "kind must be pics|attachments"}), 400
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
+        if not mu or not store:
+            return jsonify({"success": False, "error": "missing master_user_id/store_id"}), 400
+        pics_dir, attach_dir = ensure_tenant_dirs("files", mu, store)
+        base_dir = pics_dir if kind == "pics" else attach_dir
+        items = []
+        try:
+            names = sorted(os.listdir(base_dir))
+        except FileNotFoundError:
+            names = []
+        for name in names:
+            full = os.path.join(base_dir, name)
+            if not os.path.isfile(full):
+                continue
+            try:
+                st = os.stat(full)
+            except Exception:
+                continue
+            mime, _ = mimetypes.guess_type(full)
+            items.append({
+                "name": name,
+                "size_bytes": st.st_size,
+                "mtime": datetime.fromtimestamp(st.st_mtime).isoformat(),
+                "mime_type": mime or "application/octet-stream",
+            })
+        return jsonify({"success": True, "items": items, "kind": kind})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 

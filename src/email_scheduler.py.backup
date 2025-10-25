@@ -665,12 +665,6 @@ class EmailScheduler:
             self.start_time = datetime.now()
 
             for i, row in enumerate(recipients):
-                recipient_id = row["id"]
-                to_email = row["to_email"]
-
-                # 添加进度日志
-                self.logger.info(f"📧 [{i+1}/{total}] 开始发送邮件到: {to_email} (recipient_id={recipient_id})")
-
                 if self._stop_flag.is_set():
                     self.status = SchedulerStatus.STOPPED
                     break
@@ -688,6 +682,7 @@ class EmailScheduler:
                 except Exception:
                     pass
 
+                to_email = row["to_email"]
                 variables = row.get("variables") or {}
                 if isinstance(variables, str):
                     try:
@@ -916,11 +911,8 @@ class EmailScheduler:
                             send_res = {"success": True, "message_id": result.get("id", "")}
 
                     if send_res.get("success"):
-                        message_id = send_res.get("message_id")
-                        # 添加成功日志
-                        self.logger.info(f"✅ [{i+1}/{total}] 邮件发送成功: {to_email}, message_id={message_id}")
                         update_job_counts(job_id, success_inc=1)
-                        set_recipient_status(row["id"], "success", None, message_id)
+                        set_recipient_status(row["id"], "success", None, send_res.get("message_id"))
                         self.stats["success_count"] += 1
                         try:
                             insert_job_event(job_id, "recipient_success", {"email": to_email})
@@ -931,23 +923,18 @@ class EmailScheduler:
                         except Exception:
                             pass
                     else:
-                        error_msg = send_res.get("error")
-                        # 添加失败日志
-                        self.logger.error(f"❌ [{i+1}/{total}] 邮件发送失败: {to_email}, 错误: {error_msg}")
                         update_job_counts(job_id, failure_inc=1)
-                        set_recipient_status(row["id"], "failed", error_msg)
+                        set_recipient_status(row["id"], "failed", send_res.get("error"))
                         self.stats["failure_count"] += 1
                         try:
-                            insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": error_msg})
+                            insert_job_event(job_id, "recipient_failed", {"email": to_email, "error": send_res.get("error")})
                         except Exception:
                             pass
                         try:
-                            _send_webhook("recipient_failed", {"to_email": to_email, "error": error_msg})
+                            _send_webhook("recipient_failed", {"to_email": to_email, "error": send_res.get("error")})
                         except Exception:
                             pass
                 except Exception as e:
-                    # 添加异常详细日志
-                    self.logger.error(f"❌ [{i+1}/{total}] 邮件发送异常: {to_email}, 错误: {e}", exc_info=True)
                     update_job_counts(job_id, failure_inc=1)
                     set_recipient_status(row["id"], "failed", str(e))
                     self.stats["failure_count"] += 1

@@ -102,6 +102,7 @@ GET /oauth/google/authorize?sender_email={email}&master_user_id={mu}&store_id={s
 | `/api/template_files` | POST | 上传模板文件 | ✅ |
 | `/api/template_files` | GET | 列出模板语言 | ❌ |
 | `/api/template_files/{language}` | GET | 获取特定语言模板 | ❌ |
+| `/api/template_files/all` | GET | 批量获取所有语言模板内容 | ❌ |
 | `/api/template_files/{language}` | DELETE | 删除模板 | ✅ |
 
 ### 4. 资产管理（图片/附件）
@@ -112,6 +113,31 @@ GET /oauth/google/authorize?sender_email={email}&master_user_id={mu}&store_id={s
 | `/api/assets` | GET | 列出资产 | ❌ |
 | `/api/assets/{asset_id}` | GET | 获取资产详情 | ❌ |
 | `/api/assets/{asset_id}` | DELETE | 删除资产 | ✅ |
+
+### 6. 文件浏览（pics/attachments）
+
+#### GET /api/files/{kind}
+
+列出指定租户 `pics` 或 `attachments` 目录下的所有文件。
+
+**路径参数**:
+- `kind`: `pics` 或 `attachments`
+
+**查询参数**:
+- `master_user_id` (string, 必填)
+- `store_id` (string, 必填)
+
+**响应示例**:
+```json
+{
+  "success": true,
+  "kind": "pics",
+  "items": [
+    { "name": "logo.png", "size_bytes": 45678, "mtime": "2025-10-25T20:10:00", "mime_type": "image/png" },
+    { "name": "banner.jpg", "size_bytes": 123456, "mtime": "2025-10-25T20:12:34", "mime_type": "image/jpeg" }
+  ]
+}
+```
 
 ### 5. 发件人管理
 
@@ -503,7 +529,7 @@ curl -X POST http://127.0.0.1:5000/api/jobs/202510171230_abc123/cancel \
 |------|------|------|------|
 | `master_user_id` | string | ✅ | 主用户ID |
 | `store_id` | string | ✅ | 店铺ID |
-| `language` | string | ✅ | 语言代码（en/esp/fr等） |
+| `language` | string | ✅ | 语言代码（en/esp/fr，或 `default`） |
 | `kind` | string | ✅ | 模板类型: subject 或 content |
 | `file` | file | ✅ | 模板文件 |
 
@@ -565,6 +591,50 @@ curl -X POST http://127.0.0.1:5000/api/template_files \
       "has_content": true,
       "subject_path": "files/tenant_1_2/templates/esp_subject.txt",
       "content_path": "files/tenant_1_2/templates/esp_content.txt"
+    }
+  ]
+}
+```
+
+---
+
+#### GET /api/template_files/all
+
+批量获取指定租户的所有语言模板内容（subject 与 content）。
+
+**查询参数**:
+
+| 参数 | 类型 | 必需 | 说明 |
+|------|------|------|------|
+| `master_user_id` | string | ✅ | 主用户ID |
+| `store_id` | string | ✅ | 店铺ID |
+| `include_empty` | boolean | ❌ | 是否包含subject与content均为空的语言（默认 false） |
+
+**示例**:
+
+```bash
+# 获取所有语言模板内容（默认不包含空模板）
+curl "http://127.0.0.1:5000/api/template_files/all?master_user_id=1&store_id=2"
+
+# 包含空模板语言
+curl "http://127.0.0.1:5000/api/template_files/all?master_user_id=1&store_id=2&include_empty=true"
+```
+
+**响应示例**:
+
+```json
+{
+  "success": true,
+  "items": [
+    {
+      "language": "en",
+      "subject": "Loved your [video_topic] video!",
+      "content": "<p>Hi [name],</p><p>[hook]</p>..."
+    },
+    {
+      "language": "esp",
+      "subject": "¡Nos encantó tu video de [video_topic]!",
+      "content": "<p>Hola [name],</p><p>[hook]</p>..."
     }
   ]
 }

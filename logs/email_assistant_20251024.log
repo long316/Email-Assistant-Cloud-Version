@@ -1,0 +1,1487 @@
+2025-10-24 22:38:13,765 - src.job_runner - INFO - 启动JobRunner，轮询间隔: 2秒
+2025-10-24 22:38:13,767 - src.job_runner - INFO - JobRunner主循环已启动，开始轮询任务...
+2025-10-24 22:38:13,767 - src.job_runner - INFO - JobRunner后台线程已启动
+2025-10-24 22:38:13,853 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 22:38:13,853 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 22:41:34,058 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-24 22:49:27,996 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-24 23:00:15,897 - src.job_runner - INFO - 启动JobRunner，轮询间隔: 2秒
+2025-10-24 23:00:15,899 - src.job_runner - INFO - JobRunner主循环已启动，开始轮询任务...
+2025-10-24 23:00:15,899 - src.job_runner - INFO - JobRunner后台线程已启动
+2025-10-24 23:00:15,926 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 23:00:15,926 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 23:12:31,898 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:12:31] "GET /api/senders?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-24 23:12:38,382 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:12:38] "GET /api/template_files?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-24 23:12:48,414 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:12:48] "GET /api/template_files?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-24 23:12:49,006 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:12:49] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-24 23:24:26,559 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query ([WinError 10054] 远程主机强迫关闭了一个现有的连接。)'), 1秒后重试...
+2025-10-24 23:24:27,764 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 2秒后重试...
+2025-10-24 23:28:24,778 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:28:24] "GET /api/template_files?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-24 23:28:24,781 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 23:28:24] "GET /api/template_files?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-24 23:29:30,345 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-24 23:34:23,365 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 03:27:30,086 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query (timed out)'), 1秒后重试...
+2025-10-25 12:06:20,287 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query (timed out)'), 1秒后重试...
+2025-10-25 12:39:31,737 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:40:25,548 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:50:19,216 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:50:25,224 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 12:55:59,161 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:57:22,983 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:57:28,986 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 12:57:35,990 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 12:57:35,991 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 12:57:43,068 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:58:08,174 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 12:58:14,178 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 13:38:05,737 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 1秒后重试...
+2025-10-25 13:38:06,792 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 2秒后重试...
+2025-10-25 14:52:35,508 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:35,549 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:38,011 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 1秒后重试...
+2025-10-25 14:52:39,092 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 2秒后重试...
+2025-10-25 14:52:41,121 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:41,122 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:43,134 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 1秒后重试...
+2025-10-25 14:52:44,137 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 2秒后重试...
+2025-10-25 14:52:46,165 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:46,166 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 14:52:50,793 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:52:55,351 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:53:00,119 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:00,120 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:05,723 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:53:10,281 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:53:14,757 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:14,757 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:19,547 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:53:23,692 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:53:29,070 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:29,070 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:33,816 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:53:37,850 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:53:43,542 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:43,543 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:48,543 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:53:53,165 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:53:57,360 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:53:57,361 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:02,313 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:54:06,474 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:54:11,020 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:11,021 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:16,302 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:54:20,772 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:54:24,965 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:24,966 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:29,887 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:54:33,774 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:54:38,852 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:38,852 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:44,251 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:54:48,821 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:54:53,830 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:53,831 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:54:58,066 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:55:01,933 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:55:06,872 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:06,873 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:12,666 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:55:16,923 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:55:21,988 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:21,990 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:26,757 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:55:31,605 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:55:36,788 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:36,789 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:42,085 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:55:46,434 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:55:51,647 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:51,648 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:55:56,941 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:55:59,676 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:56:04,945 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:04,946 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:10,404 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:56:13,785 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:56:19,588 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:19,588 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:24,979 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:56:28,013 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:56:32,006 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:32,006 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:36,481 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:56:40,727 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:56:44,540 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:44,540 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:49,494 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:56:54,338 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:56:59,891 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:56:59,892 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:05,256 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:57:09,863 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:57:14,983 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:14,984 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:20,480 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:57:24,476 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:57:29,430 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:29,433 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:33,556 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:57:37,407 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:57:43,149 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:43,149 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:46,229 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:57:50,162 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:57:54,605 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:54,606 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:57:59,120 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:58:03,449 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:58:08,912 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:08,913 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:14,489 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:58:18,613 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:58:22,218 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:22,220 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:26,087 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:58:29,263 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:58:34,149 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:34,151 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:38,881 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:58:41,723 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:58:47,063 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:47,063 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:58:51,992 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:58:55,848 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:59:00,185 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:00,186 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:04,964 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:59:09,155 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:59:14,702 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:14,703 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:19,861 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:59:23,858 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:59:29,580 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:29,582 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:34,488 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:59:38,688 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:59:43,837 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:43,838 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:49,946 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 14:59:54,593 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 14:59:59,812 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 14:59:59,812 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:05,464 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:00:09,860 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:00:14,527 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:14,528 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:19,255 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:00:23,221 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:00:28,730 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:28,731 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:32,887 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:00:37,026 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:00:42,837 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:42,838 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:48,380 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:00:51,867 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:00:56,642 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:00:56,644 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:01,700 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:01:05,178 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:01:09,470 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:09,471 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:14,246 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:01:18,580 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:01:23,579 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:23,580 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:29,301 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:01:33,881 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:01:38,042 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:38,044 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:42,347 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:01:45,962 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:01:51,013 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:51,017 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:01:56,105 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:02:01,087 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:02:05,763 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:02:05,764 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 15:02:11,010 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 15:02:14,943 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-25 15:02:16,947 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+2025-10-25 15:02:16,948 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+2025-10-25 15:02:18,967 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)"), 1秒后重试...
+2025-10-25 15:02:19,975 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)"), 2秒后重试...
+2025-10-25 15:02:21,984 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 15:02:21,985 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 255, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=30,        # 写入超时30秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)")
+2025-10-25 15:02:24,029 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 1秒后重试...
+2025-10-25 15:02:35,063 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' (timed out)"), 2秒后重试...

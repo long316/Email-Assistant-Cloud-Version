@@ -4,7 +4,8 @@ from typing import Dict, Optional, List, Tuple
 from bs4 import BeautifulSoup
 
 
-LANG_PATTERN = re.compile(r"^[a-z]{2,5}(-[A-Z]{2})?$")
+# Allow standard language codes (en, es, fr, zh-CN) and a special "default"
+LANG_PATTERN = re.compile(r"^(?:[a-z]{2,5}(?:-[A-Z]{2})?|default)$")
 
 
 class TemplateFileManager:

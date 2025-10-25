@@ -2,7 +2,6 @@ import threading
 import time
 from datetime import datetime
 from typing import Optional
-import logging
 
 from src.dao_mysql import get_next_queued_job, claim_job
 from src.gmail_auth import GmailAuthManager
@@ -16,51 +15,30 @@ class JobRunner:
         self._stop = threading.Event()
         self._thread: Optional[threading.Thread] = None
 
-        # 添加logger用于记录JobRunner运行状态
-        self.logger = logging.getLogger(__name__)
-
         self.gmail_auth_manager = GmailAuthManager()
         self.excel_processor = ExcelProcessor()
         self.scheduler = EmailScheduler(self.gmail_auth_manager, self.excel_processor)
 
     def start(self):
         if self._thread and self._thread.is_alive():
-            self.logger.info("JobRunner已在运行，跳过启动")
             return
-        self.logger.info(f"启动JobRunner，轮询间隔: {self.interval_sec}秒")
         self._thread = threading.Thread(target=self._loop, daemon=True)
         self._thread.start()
-        self.logger.info("JobRunner后台线程已启动")
 
     def stop(self):
-        self.logger.info("收到停止信号，JobRunner即将退出")
         self._stop.set()
 
     def _loop(self):
-        self.logger.info("JobRunner主循环已启动，开始轮询任务...")
-        loop_count = 0
-
         while not self._stop.is_set():
             try:
                 job = get_next_queued_job()
                 if not job:
-                    # 每10次轮询记录一次心跳日志
-                    loop_count += 1
-                    if loop_count % 10 == 0:
-                        self.logger.debug(f"JobRunner心跳 - 已轮询{loop_count}次，暂无待处理任务")
                     time.sleep(self.interval_sec)
                     continue
-
                 job_id = job["id"]
-                self.logger.info(f"🔍 发现待处理任务: job_id={job_id}, type={job['type']}, sender={job.get('sender_email')}")
-
                 if not claim_job(job_id):
                     # Claimed by other runner
-                    self.logger.warning(f"⚠️  任务 {job_id} 已被其他JobRunner认领，跳过")
                     continue
-
-                self.logger.info(f"✅ 成功认领任务 {job_id}，开始执行邮件发送...")
-
                 # dispatch job
                 if job["type"] == "template":
                     self.scheduler.send_job_emails_from_db(
@@ -88,11 +66,7 @@ class JobRunner:
                         min_interval=job.get("min_interval"),
                         max_interval=job.get("max_interval"),
                     )
-
-                self.logger.info(f"🎉 任务 {job_id} 执行完成")
-
-            except Exception as e:
-                # 记录详细异常信息而不是静默吞掉
-                self.logger.error(f"❌ JobRunner循环发生异常: {e}", exc_info=True)
+            except Exception:
+                # swallow loop errors to keep runner alive
                 time.sleep(self.interval_sec)
 

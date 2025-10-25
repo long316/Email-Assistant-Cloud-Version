@@ -3,12 +3,8 @@ import os
 import pymysql
 from typing import Any, Dict, List, Optional, Tuple
 import uuid
-import logging
-import time
 
 from src.config import get_config
-
-logger = logging.getLogger(__name__)
 
 
 def _conn():
@@ -23,42 +19,16 @@ def _conn():
     if not u.scheme.startswith("mysql"):
         raise RuntimeError("DATABASE_URL must be mysql+pymysql://")
     params = parse_qs(u.query)
-
-    # 添加连接重试机制以应对网络抖动
-    max_retries = 3
-    retry_delay = 1  # 秒
-
-    for attempt in range(max_retries):
-        try:
-            conn = pymysql.connect(
-                host=u.hostname or "127.0.0.1",
-                user=u.username,
-                password=u.password,
-                database=(u.path or "/").lstrip("/") or None,
-                port=u.port or 3306,
-                charset=(params.get("charset", ["utf8mb4"])[0]),
-                autocommit=True,
-                cursorclass=pymysql.cursors.DictCursor,
-                # 添加超时配置防止无限等待
-                connect_timeout=10,      # 连接超时10秒
-                read_timeout=60,         # 读取超时60秒
-                write_timeout=60,        # 写入超时60秒
-            )
-            try:
-                # 确保连接可用，必要时自动重连
-                conn.ping(reconnect=True)
-            except Exception:
-                conn.close()
-                raise
-            return conn
-        except (pymysql.err.OperationalError, pymysql.err.InterfaceError) as e:
-            if attempt < max_retries - 1:
-                logger.warning(f"数据库连接失败 (尝试 {attempt+1}/{max_retries}): {e}, {retry_delay}秒后重试...")
-                time.sleep(retry_delay)
-                retry_delay *= 2  # 指数退避
-            else:
-                logger.error(f"数据库连接失败，已重试{max_retries}次: {e}")
-                raise
+    return pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+        user=u.username,
+        password=u.password,
+        database=(u.path or "/").lstrip("/") or None,
+        port=u.port or 3306,
+        charset=(params.get("charset", ["utf8mb4"])[0]),
+        autocommit=True,
+        cursorclass=pymysql.cursors.DictCursor,
+    )
 
 
 # Sender accounts
@@ -258,30 +228,10 @@ def get_next_queued_job() -> Optional[Dict[str, Any]]:
         "SELECT * FROM jobs WHERE status='queued' AND schedule_at IS NOT NULL AND schedule_at<=NOW()"
         " ORDER BY schedule_at, created_at LIMIT 1"
     )
-    try:
-        with _conn() as conn:
-            # 确保连接活跃
-            try:
-                conn.ping(reconnect=True)
-            except Exception:
-                pass
-            with conn.cursor() as cur:
-                cur.execute(sql)
-                return cur.fetchone()
-    except (pymysql.err.OperationalError, pymysql.err.InterfaceError) as e:
-        # 2013: Lost connection during query, 2006: MySQL server has gone away
-        code = None
-        try:
-            code = e.args[0]
-        except Exception:
-            pass
-        if code in (2013, 2006):
-            logger.warning(f"查询过程中数据库连接丢失，准备重试一次: {e}")
-            with _conn() as conn:
-                with conn.cursor() as cur:
-                    cur.execute(sql)
-                    return cur.fetchone()
-        raise
+    with _conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql)
+            return cur.fetchone()
 
 
 def claim_job(job_id: str) -> bool:
