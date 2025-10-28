@@ -1,0 +1,6 @@
+2025-10-28 17:35:41,617 - src.job_runner - INFO - 启动JobRunner，轮询间隔: 2秒
+2025-10-28 17:35:41,618 - src.job_runner - INFO - JobRunner主循环已启动，开始轮询任务...
+2025-10-28 17:35:41,618 - src.job_runner - INFO - JobRunner后台线程已启动
+2025-10-28 17:35:41,652 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-28 17:35:41,653 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

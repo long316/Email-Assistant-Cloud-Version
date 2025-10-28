@@ -197,7 +197,7 @@ class EmailScheduler:
             self._pause_flag.clear()
 
             # 获取Gmail服务
-            gmail_service = self.gmail_auth_manager.get_gmail_service(sender_email)
+            gmail_service = self.gmail_auth_manager.get_gmail_service(sender_email, master_user_id, store_id)
             if not gmail_service:
                 self.status = SchedulerStatus.ERROR
                 return {"success": False, "error": "Gmail服务初始化失败"}
@@ -638,7 +638,7 @@ class EmailScheduler:
                 pass
 
             # Gmail service
-            gmail_service = self.gmail_auth_manager.get_gmail_service(sender_email)
+            gmail_service = self.gmail_auth_manager.get_gmail_service(sender_email, master_user_id, store_id)
             if not gmail_service:
                 set_job_status(job_id, "error")
                 return {"success": False, "error": "Gmail service init failed"}

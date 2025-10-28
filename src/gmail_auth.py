@@ -156,7 +156,7 @@ class GmailAuthManager:
 
         return email_address, creds.to_json()
 
-    def get_gmail_service(self, email: str):
+    def get_gmail_service(self, email: str, master_user_id: Optional[str] = None, store_id: Optional[str] = None):
         """
         获取指定邮箱的Gmail服务对象
 
@@ -166,7 +166,26 @@ class GmailAuthManager:
         Returns:
             Gmail API服务对象，失败时返回None
         """
-        creds = self.authenticate(email)
+        # 优先从数据库按租户读取令牌，禁止使用本地散落token文件进行发送
+        creds: Optional[Credentials] = None
+        if master_user_id is not None and store_id is not None:
+            try:
+                from src.dao_mysql import get_sender_account
+                row = get_sender_account(str(master_user_id), str(store_id), email)
+                if row and row.get("token_json"):
+                    import json as _json
+                    info = row["token_json"] if isinstance(row["token_json"], dict) else _json.loads(row["token_json"])
+                    creds = Credentials.from_authorized_user_info(info, SCOPES)
+            except Exception as e:
+                self.logger.error(f"从数据库加载令牌失败: {e}")
+
+        # 若提供了租户信息但未查到令牌，则直接失败，避免使用本地文件令牌
+        if master_user_id is not None and store_id is not None and not creds:
+            self.logger.error("未找到与租户匹配的发送令牌，拒绝使用本地文件令牌")
+            return None
+        # 未提供租户信息（如本地开发工具场景）可走本地认证流程
+        if master_user_id is None and store_id is None and not creds:
+            creds = self.authenticate(email)
         if not creds:
             self.logger.error(f"获取认证凭据失败: {email}")
             return None

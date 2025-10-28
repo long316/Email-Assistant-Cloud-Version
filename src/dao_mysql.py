@@ -73,6 +73,21 @@ def upsert_sender_account(master_user_id: str, store_id: str, email: str, token_
             cur.execute(sql, (master_user_id, store_id, email, json.dumps(token_json)))
 
 
+def get_sender_account(master_user_id: str, store_id: str, email: str) -> Optional[Dict[str, Any]]:
+    """Fetch a sender account row for the given tenant and email.
+
+    Returns dict with fields including token_json when found, otherwise None.
+    """
+    sql = (
+        "SELECT id, master_user_id, store_id, email, provider, status, token_json, created_at, updated_at "
+        "FROM sender_accounts WHERE master_user_id=%s AND store_id=%s AND email=%s LIMIT 1"
+    )
+    with _conn() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, (master_user_id, store_id, email))
+            return cur.fetchone()
+
+
 # Templates minimal CRUD
 def create_template(data: Dict[str, Any]) -> int:
     sql = (
