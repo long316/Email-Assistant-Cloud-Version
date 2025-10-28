@@ -2808,3 +2808,247 @@ Traceback (most recent call last):
         CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
     )
 pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 21:13:41,316 - src.job_runner - INFO - 启动JobRunner，轮询间隔: 2秒
+2025-10-25 21:13:41,317 - src.job_runner - INFO - JobRunner主循环已启动，开始轮询任务...
+2025-10-25 21:13:41,317 - src.job_runner - INFO - JobRunner后台线程已启动
+2025-10-25 21:13:41,357 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 21:13:41,358 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-25 21:14:14,610 - src.dao_mysql - WARNING - 查询过程中数据库连接丢失，准备重试一次: (2013, 'Lost connection to MySQL server during query')
+2025-10-25 21:16:14,809 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:16:14] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:16:21,542 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:16:21] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:16:28,263 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:16:28] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:16:33,135 - src.job_runner - INFO - 🔍 发现待处理任务: job_id=f5628eb8-6fbe-4ef2-9eaf-b76c1542129c, type=template, sender=johnloneyy@gmail.com
+2025-10-25 21:16:35,282 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:16:35] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:16:37,455 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:16:37] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-25 21:16:37,555 - src.job_runner - INFO - ✅ 成功认领任务 f5628eb8-6fbe-4ef2-9eaf-b76c1542129c，开始执行邮件发送...
+2025-10-25 21:17:03,229 - src.gmail_auth - INFO - 加载已存在的认证文件: token_johnloneyy_gmail_com.json
+2025-10-25 21:17:03,234 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-25 21:17:03,240 - src.gmail_auth - INFO - Gmail服务初始化成功: johnloneyy@gmail.com
+2025-10-25 21:17:09,608 - src.email_scheduler - INFO - 📧 [1/1] 开始发送邮件到: junoliii98@gmail.com (recipient_id=46)
+2025-10-25 21:17:22,448 - src.email_scheduler - INFO - ✅ [1/1] 邮件发送成功: junoliii98@gmail.com, message_id=19a1b843b296327f
+2025-10-25 21:17:52,558 - src.job_runner - INFO - 🎉 任务 f5628eb8-6fbe-4ef2-9eaf-b76c1542129c 执行完成
+2025-10-25 21:19:50,791 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:25:58,903 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:25:58] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:26:06,998 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:26:06] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:26:29,988 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:26:29] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:26:37,584 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:26:37] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:26:42,683 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:26:42] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:27:04,248 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:27:04] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:27:06,838 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:27:06] "POST /api/jobs/send_template_emails HTTP/1.1" 200 -
+2025-10-25 21:27:09,093 - src.job_runner - INFO - 🔍 发现待处理任务: job_id=0dc647ba-d8a1-4925-a23f-d2435a32d430, type=template, sender=johnloneyy@gmail.com
+2025-10-25 21:27:19,717 - src.job_runner - INFO - ✅ 成功认领任务 0dc647ba-d8a1-4925-a23f-d2435a32d430，开始执行邮件发送...
+2025-10-25 21:27:47,818 - src.gmail_auth - INFO - 加载已存在的认证文件: token_johnloneyy_gmail_com.json
+2025-10-25 21:27:49,381 - src.gmail_auth - INFO - 刷新认证token成功: johnloneyy@gmail.com
+2025-10-25 21:27:49,384 - src.gmail_auth - INFO - 认证凭据已保存: token_johnloneyy_gmail_com.json
+2025-10-25 21:27:49,392 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-10-25 21:27:49,401 - src.gmail_auth - INFO - Gmail服务初始化成功: johnloneyy@gmail.com
+2025-10-25 21:27:54,197 - src.email_scheduler - INFO - 📧 [1/1] 开始发送邮件到: junoliii98@gmail.com (recipient_id=47)
+2025-10-25 21:28:06,219 - src.email_scheduler - INFO - ✅ [1/1] 邮件发送成功: junoliii98@gmail.com, message_id=19a1b8e0f51c8e80
+2025-10-25 21:28:37,178 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:28:37] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:28:39,366 - src.job_runner - INFO - 🎉 任务 0dc647ba-d8a1-4925-a23f-d2435a32d430 执行完成
+2025-10-25 21:28:46,827 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:28:46] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:32:33,449 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:32:33] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:32:58,819 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:32:58] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:32:59,061 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:32:59] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:33:33,874 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:33:33] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:34:06,643 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:34:06] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=pics HTTP/1.1" 200 -
+2025-10-25 21:34:56,413 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:35:52,376 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:35:52] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:36:27,467 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:36:34,714 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:36:34] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:36:59,136 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:40:55,391 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:41:12,867 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:12] "POST /api/assets HTTP/1.1" 200 -
+2025-10-25 21:41:22,533 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:22] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:41:41,545 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:41] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:41:44,192 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:44] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:41:46,878 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:46] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 21:41:53,959 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 21:41:53] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 21:53:57,869 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:56:19,633 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 21:58:59,114 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 22:00:51,132 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 22:04:24,418 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:04:24] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:04:50,827 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:04:50] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 22:08:32,792 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:08:32] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:08:41,936 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:08:41] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 22:08:43,046 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:08:43] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 22:15:50,017 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:15:50] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=image HTTP/1.1" 200 -
+2025-10-25 22:16:52,597 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:16:52] "[33mGET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1[0m" 404 -
+2025-10-25 22:18:11,047 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:18:11] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:18:12,812 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:18:12] "[33mGET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1[0m" 404 -
+2025-10-25 22:20:21,432 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:20:21] "[33mGET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1[0m" 404 -
+2025-10-25 22:20:24,789 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:20:24] "GET /api/assets?master_user_id=admin&store_id=store&asset_type=attachment HTTP/1.1" 200 -
+2025-10-25 22:20:36,542 - src.job_runner - INFO - 启动JobRunner，轮询间隔: 2秒
+2025-10-25 22:20:36,543 - src.job_runner - INFO - JobRunner主循环已启动，开始轮询任务...
+2025-10-25 22:20:36,543 - src.job_runner - INFO - JobRunner后台线程已启动
+2025-10-25 22:20:36,567 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-25 22:20:36,568 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-25 22:21:00,269 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 22:21:14,518 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:21:14] "GET /api/files/attachments?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:21:16,414 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:21:16] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:21:31,208 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 22:21:40,588 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:21:40] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store&download=True HTTP/1.1[0m" 500 -
+2025-10-25 22:27:00,501 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:27:00] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:27:24,383 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:27:24] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:31:27,833 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:31:27] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:32:15,796 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:32:15] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store HTTP/1.1[0m" 500 -
+2025-10-25 22:32:23,707 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:32:23] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:32:28,306 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:32:28] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store HTTP/1.1[0m" 500 -
+2025-10-25 22:33:07,051 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:07] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store HTTP/1.1[0m" 500 -
+2025-10-25 22:33:10,471 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:10] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:33:13,460 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:13] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:33:26,384 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:26] "GET /api/template_files/all?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:33:35,709 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:35] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 22:33:38,129 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:33:38] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store HTTP/1.1[0m" 500 -
+2025-10-25 22:34:33,749 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:34:33] "GET /api/template_files/all?master_user_id=1&store_id=2 HTTP/1.1" 200 -
+2025-10-25 22:35:12,870 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 22:35:12] "[35m[1mGET /api/files/pics/captcha.png?master_user_id=admin&store_id=store HTTP/1.1[0m" 500 -
+2025-10-25 22:38:23,595 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 22:47:18,938 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query ([WinError 10054] 远程主机强迫关闭了一个现有的连接。)'), 1秒后重试...
+2025-10-25 22:47:20,116 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10051] 向一个无法连接的网络尝试了一个套接字操作。)"), 2秒后重试...
+2025-10-25 23:53:12,719 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-25 23:53:22,714 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 23:53:22] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 23:53:31,338 - werkzeug - INFO - 127.0.0.1 - - [25/Oct/2025 23:53:31] "GET /api/files/pics?master_user_id=admin&store_id=store HTTP/1.1" 200 -
+2025-10-25 23:53:55,303 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 13:36:33,868 - src.dao_mysql - WARNING - 查询过程中数据库连接丢失，准备重试一次: (2013, 'Lost connection to MySQL server during query ([WinError 10054] 远程主机强迫关闭了一个现有的连接。)')
+2025-10-26 14:09:16,780 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 14:09:20,601 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-26 14:09:25,891 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-26 14:09:25,892 - src.dao_mysql - WARNING - 查询过程中数据库连接丢失，准备重试一次: (2013, 'Lost connection to MySQL server during query')
+2025-10-26 14:09:29,106 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 14:09:32,650 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query'), 2秒后重试...
+2025-10-26 14:09:37,319 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2013, 'Lost connection to MySQL server during query')
+2025-10-26 14:09:37,320 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2013, 'Lost connection to MySQL server during query')
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\dao_mysql.py", line 262, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=60,        # 写入超时60秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 280, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=60,        # 写入超时60秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 680, in connect
+    self._get_server_information()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 1099, in _get_server_information
+    packet = self._read_packet()
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 751, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 805, in _read_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_LOST, "Lost connection to MySQL server during query"
+    )
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+2025-10-26 14:09:42,393 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 14:09:46,472 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2013, 'Lost connection to MySQL server during query ([WinError 10054] 远程主机强迫关闭了一个现有的连接。)'), 2秒后重试...
+2025-10-26 14:09:48,487 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+2025-10-26 14:09:48,488 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+OSError: [WinError 10065] 套接字操作尝试一个无法连接的主机。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 262, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=60,        # 写入超时60秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)")
+2025-10-26 14:09:50,495 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)"), 1秒后重试...
+2025-10-26 14:09:51,497 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 2/3): (2003, "Can't connect to MySQL server on '120.25.232.16' ([WinError 10065] 套接字操作尝试一个无法连接的主机。)"), 2秒后重试...
+2025-10-26 14:10:03,517 - src.dao_mysql - ERROR - 数据库连接失败，已重试3次: (2003, "Can't connect to MySQL server on '120.25.232.16' (timed out)")
+2025-10-26 14:10:03,517 - src.job_runner - ERROR - ❌ JobRunner循环发生异常: (2003, "Can't connect to MySQL server on '120.25.232.16' (timed out)")
+Traceback (most recent call last):
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+        (self.host, self.port), self.connect_timeout, **kwargs
+    )
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 864, in create_connection
+    raise exceptions[0]
+  File "C:\Users\86166\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 849, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Email Assistant\src\job_runner.py", line 45, in _loop
+    job = get_next_queued_job()
+  File "D:\Email Assistant\src\dao_mysql.py", line 262, in get_next_queued_job
+    with _conn() as conn:
+         ~~~~~^^
+  File "D:\Email Assistant\src\dao_mysql.py", line 33, in _conn
+    conn = pymysql.connect(
+        host=u.hostname or "127.0.0.1",
+    ...<10 lines>...
+        write_timeout=60,        # 写入超时60秒
+    )
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\Email Assistant\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '120.25.232.16' (timed out)")
+2025-10-26 14:10:15,539 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2003, "Can't connect to MySQL server on '120.25.232.16' (timed out)"), 1秒后重试...
+2025-10-26 14:34:34,068 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 14:36:19,635 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...
+2025-10-26 14:42:57,203 - src.dao_mysql - WARNING - 数据库连接失败 (尝试 1/3): (2013, 'Lost connection to MySQL server during query'), 1秒后重试...

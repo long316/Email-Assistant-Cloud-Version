@@ -21,13 +21,15 @@ RUN pip install --upgrade pip && \
 COPY . /app
 
 # Create runtime dirs (mounted as volumes in compose)
-RUN mkdir -p /app/logs /app/files /app/files/pics
+RUN mkdir -p /app/logs /app/files /app/files/pics /data/files /data/files/pics /data/files/attachments
 
 EXPOSE 5000
 
 # Default env (override in container runtime)
 ENV AUTH_FLOW=web \
-    OAUTH_REDIRECT_URL=http://127.0.0.1:5000/oauth/google/callback
+    OAUTH_REDIRECT_URL=http://127.0.0.1:5000/oauth/google/callback \
+    FILES_ROOT=/data/files \
+    GOOGLE_OAUTH_CLIENT_JSON=/secrets/credentials.json
 
 # Run with Gunicorn
 CMD [ \

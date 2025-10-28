@@ -1,7 +1,7 @@
 import os
 import base64
 import json
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, send_file
 from werkzeug.utils import secure_filename
 
 from src.config import get_config
@@ -365,7 +365,8 @@ def assets_upload():
         f = request.files.get("file")
         if not f:
             return jsonify({"success": False, "error": "missing file"}), 400
-        pics_dir, attach_dir = ensure_tenant_dirs("files", master_user_id, store_id)
+        files_root = get_config().get("FILES_ROOT")
+        pics_dir, attach_dir = ensure_tenant_dirs(files_root, master_user_id, store_id)
         target_dir = pics_dir if asset_type == "image" else attach_dir
         filename = secure_filename(f.filename)
         if not filename:
@@ -406,7 +407,7 @@ def template_files_upload():
         f = request.files.get("file")
         if not (mu and store and language and kind and f):
             return jsonify({"success": False, "error": "missing fields"}), 400
-        tfm = TemplateFileManager()
+        tfm = TemplateFileManager(get_config().get("FILES_ROOT"))
         if kind == "subject":
             tfm.save_subject(mu, store, language, f.read().decode("utf-8", errors="ignore"))
         elif kind == "content":
@@ -423,7 +424,7 @@ def template_files_list():
     try:
         mu = request.args.get("master_user_id", "")
         store = request.args.get("store_id", "")
-        tfm = TemplateFileManager()
+        tfm = TemplateFileManager(get_config().get("FILES_ROOT"))
         items = tfm.list_languages(mu, store)
         return jsonify({"success": True, "items": items})
     except Exception as e:
@@ -435,7 +436,7 @@ def template_files_get(language: str):
     try:
         mu = request.args.get("master_user_id", "")
         store = request.args.get("store_id", "")
-        tfm = TemplateFileManager()
+        tfm = TemplateFileManager(get_config().get("FILES_ROOT"))
         data = tfm.read_language(mu, store, language)
         return jsonify({"success": True, "template": data})
     except Exception as e:
@@ -448,7 +449,7 @@ def template_files_all():
         mu = request.args.get("master_user_id", "")
         store = request.args.get("store_id", "")
         include_empty = request.args.get("include_empty", "false").strip().lower() in ("1", "true", "yes")
-        tfm = TemplateFileManager()
+        tfm = TemplateFileManager(get_config().get("FILES_ROOT"))
         langs = tfm.list_languages(mu, store)
         items = []
         for it in langs:
@@ -535,7 +536,8 @@ def files_list(kind: str):
         store = request.args.get("store_id", "")
         if not mu or not store:
             return jsonify({"success": False, "error": "missing master_user_id/store_id"}), 400
-        pics_dir, attach_dir = ensure_tenant_dirs("files", mu, store)
+        files_root = get_config().get("FILES_ROOT")
+        pics_dir, attach_dir = ensure_tenant_dirs(files_root, mu, store)
         base_dir = pics_dir if kind == "pics" else attach_dir
         items = []
         try:
@@ -558,6 +560,32 @@ def files_list(kind: str):
                 "mime_type": mime or "application/octet-stream",
             })
         return jsonify({"success": True, "items": items, "kind": kind})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@bp.route("/files/<string:kind>/<path:filename>", methods=["GET"])
+def file_get(kind: str, filename: str):
+    try:
+        kind = (kind or "").strip().lower()
+        if kind not in ("pics", "attachments"):
+            return jsonify({"success": False, "error": "kind must be pics|attachments"}), 400
+        mu = request.args.get("master_user_id", "")
+        store = request.args.get("store_id", "")
+        download = (request.args.get("download", "0") or "").strip().lower() in ("1", "true", "yes")
+        if not mu or not store:
+            return jsonify({"success": False, "error": "missing master_user_id/store_id"}), 400
+        files_root = get_config().get("FILES_ROOT")
+        pics_dir, attach_dir = ensure_tenant_dirs(files_root, mu, store)
+        base_dir = pics_dir if kind == "pics" else attach_dir
+        safe_name = secure_filename(filename)
+        if not safe_name:
+            return jsonify({"success": False, "error": "invalid filename"}), 400
+        full = os.path.join(base_dir, safe_name)
+        if not os.path.isfile(full):
+            return jsonify({"success": False, "error": "not found"}), 404
+        mime, _ = mimetypes.guess_type(full)
+        return send_file(full, mimetype=mime or "application/octet-stream", as_attachment=download, download_name=safe_name, conditional=True)
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 

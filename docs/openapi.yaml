@@ -928,6 +928,41 @@ paths:
                         size_bytes: { type: integer }
                         mtime: { type: string, description: ISO timestamp }
                         mime_type: { type: string }
+
+  /api/files/{kind}/{filename}:
+    get:
+      tags: [Files]
+      summary: Stream a specific file from pics or attachments
+      parameters:
+        - in: path
+          name: kind
+          required: true
+          schema: { type: string, enum: [pics, attachments] }
+        - in: path
+          name: filename
+          required: true
+          schema: { type: string }
+        - in: query
+          name: master_user_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: store_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: download
+          schema: { type: boolean }
+          description: Set true to force download (Content-Disposition: attachment)
+      responses:
+        '200':
+          description: File content
+          content:
+            '*/*':
+              schema:
+                type: string
+                format: binary
+        '404': { description: Not found }
     delete:
       tags: [Assets]
       summary: Delete asset

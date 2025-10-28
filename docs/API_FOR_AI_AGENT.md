@@ -139,6 +139,28 @@ GET /oauth/google/authorize?sender_email={email}&master_user_id={mu}&store_id={s
 }
 ```
 
+#### GET /api/files/{kind}/{filename}
+
+预览或下载指定文件（支持图片在线预览，附件下载）。
+
+**路径参数**:
+- `kind`: `pics` 或 `attachments`
+- `filename`: 文件名（例如 `logo.png`, `brochure.pdf`）
+
+**查询参数**:
+- `master_user_id` (string, 必填)
+- `store_id` (string, 必填)
+- `download` (boolean, 可选) 为 `true` 时强制下载
+
+**示例**:
+```bash
+# 在线预览图片（浏览器将根据 Content-Type 渲染）
+curl "http://127.0.0.1:5000/api/files/pics/logo.png?master_user_id=admin&store_id=store" -o -
+
+# 下载附件（触发附件下载）
+curl -L "http://127.0.0.1:5000/api/files/attachments/brochure.pdf?master_user_id=admin&store_id=store&download=true" -o brochure.pdf
+```
+
 ### 5. 发件人管理
 
 | 端点 | 方法 | 说明 | 需要密钥 |

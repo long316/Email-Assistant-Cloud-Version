@@ -1,39 +1,102 @@
-version: "3.8"
+version: "3.9"
 
 services:
-  email-assistant:
-    build: .
+  email_assistant:
+    build:
+      context: ./email-assistant
+      dockerfile: Dockerfile
     image: email-assistant:latest
     container_name: email-assistant
-    restart: unless-stopped
+    command: gunicorn -b 0.0.0.0:5000 "src.api_server:create_app()"
+    env_file:
+      - ./email-assistant/.env
     environment:
-      - AUTH_FLOW=${AUTH_FLOW:-web}
-      - GOOGLE_OAUTH_CLIENT_JSON=/secrets/credentials.json
-      - OAUTH_REDIRECT_URL=${OAUTH_REDIRECT_URL}
-      - API_KEY=${API_KEY}
-      - DATABASE_URL=postgresql+psycopg2://${POSTGRES_USER:-ea}:${POSTGRES_PASSWORD:-ea}@db:5432/${POSTGRES_DB:-ea}
+      # Ensure OAuth redirect includes the path prefix handled by Caddy
+      - OAUTH_REDIRECT_URL=${OAUTH_REDIRECT_URL:-https://your-domain.com/email-assistant/oauth/google/callback}
+      # Point to mounted secrets path in container
+      - GOOGLE_OAUTH_CLIENT_JSON=${GOOGLE_OAUTH_CLIENT_JSON:-/secrets/credentials.json}
+      # Files root inside container (mounted volume below)
+      - FILES_ROOT=${FILES_ROOT:-/data/files}
+      # DATABASE_URL, API_KEY, etc. loaded from .env via env_file
     volumes:
-      - ./files:/app/files
-      - ./logs:/app/logs
-      - ./secrets:/secrets:ro
-      - ./token_store:/app
-    ports:
-      - "5000:5000"
-    healthcheck:
-      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:5000/api/health"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
+      - ./email-assistant/files:/data/files
+      - ./email-assistant/secrets/credentials.json:/secrets/credentials.json:ro
+      - ./email-assistant/logs:/app/logs
+    expose:
+      - "5000"
+    networks:
+      - web
 
-  db:
-    image: postgres:15
-    container_name: email-assistant-db
-    restart: unless-stopped
+  api:
+    build:
+      context: ./video-content-analysis
+      dockerfile: Dockerfile
+    image: video-analysis:latest
+    container_name: video-analysis-api
+    command: >
+      gunicorn src.api.main:app -c deployment/gunicorn_config.py
+    env_file:
+      - ./video-content-analysis/.env
     environment:
-      - POSTGRES_USER=${POSTGRES_USER:-ea}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-ea}
-      - POSTGRES_DB=${POSTGRES_DB:-ea}
+      REDIS_HOST: redis
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+      ROOT_PATH: /video-analysis
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./video-content-analysis/logs:/app/logs
+      - ./video-content-analysis/videos:/app/videos
+    depends_on:
+      - redis
+    networks:
+      - web
+
+  worker:
+    image: video-analysis:latest
+    container_name: video-analysis-worker
+    command: >
+      sh -c "celery -A src.tasks.celery_app worker --loglevel=info --concurrency=${CELERY_WORKER_CONCURRENCY:-4}"
+    env_file:
+      - ./video-content-analysis/.env
+    environment:
+      REDIS_HOST: redis
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/0
+    volumes:
+      - ./video-content-analysis/logs:/app/logs
+      - ./video-content-analysis/videos:/app/videos
+    depends_on:
+      - redis
+    networks:
+      - web
+
+  redis:
+    image: redis:6-alpine
+    container_name: video-analysis-redis
+    networks:
+      - web
+
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy
     ports:
-      - "5432:5432"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      DOMAIN: ${DOMAIN}
+    depends_on:
+      - api
+      - email_assistant
+    networks:
+      - web
+
+networks:
+  web:
+
+volumes:
+  caddy_data:
+  caddy_config:
